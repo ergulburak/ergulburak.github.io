@@ -1,6 +1,6 @@
 # Setup
 title: Burak's Blog
-url: https://ergulburak.github.io/
+url: http://ergulburak.github.io/
 paginate: 1
 paginate_path: "/baseurl/page:num/"
 baseurl: ""
