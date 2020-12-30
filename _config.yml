@@ -2,7 +2,6 @@
 title: Burak's Blog
 url: http://ergulburak.github.io/
 paginate: 1
-paginate_path: "/baseurl/page:num/"
 baseurl: ""
 permalink: pretty
 
@@ -50,3 +49,4 @@ nav:
 
   - title: About
     url: /about
+
