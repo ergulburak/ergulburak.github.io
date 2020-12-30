@@ -42,11 +42,11 @@ version: 3.0.0
 # Navbar page list
 nav:
   - title: Blog
-    url: /archive
+    url: /arsiv
 
   - title: Oyunlar
     url: /oyunlar
 
-  - title: About
-    url: /about
+  - title: Hakkımda
+    url: /hakkimda
 

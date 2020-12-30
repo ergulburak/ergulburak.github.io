@@ -39,4 +39,4 @@ Bilişim Vadisi'nde düzenlenen *Oyunla Gelecek* kampında orada tanıştığım
 
 ## My Apocalypse
 
-**PuraGameJam** etkinliği içerisinde [Uzay](https://www.linkedin.com/in/uzay-adiguzel/) ve [Serdar](https://www.linkedin.com/in/muhammed-serdar-oygen/) ile beraber hazırladığımız *collaboration* temalı oyunumuz.__Link yakında eklenecek__ <br /><br /><br />
+**PuraGameJam** etkinliği içerisinde [Uzay](https://www.linkedin.com/in/uzay-adiguzel/) ve [Serdar](https://www.linkedin.com/in/muhammed-serdar-oygen/) ile beraber hazırladığımız *collaboration* temalı oyunumuz. Proje dosyasına erişmek için [tıklayabilirsiniz.](#) <br /><br /><br />
