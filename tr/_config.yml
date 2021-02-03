@@ -1,8 +1,8 @@
 # Setup
 title: Burak's Blog
-url: http://ergulburak.github.io/
-paginate: 1
-baseurl: ""
+url: http://ergulburak.github.io/tr
+paginate: "/baseurl/page:num/"
+baseurl: "/tr"
 permalink: pretty
 
 # Gems
@@ -40,4 +40,13 @@ author:
 version: 3.0.0
 
 # Navbar page list
+nav:
+  - title: Blog
+    url: /arsiv
+
+  - title: Oyunlar
+    url: /oyunlar
+
+  - title: Hakkımda
+    url: /hakkimda
 
