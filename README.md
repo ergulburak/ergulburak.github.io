@@ -1,128 +1,147 @@
-# Dark Poole
+![logo](logo.png)
+--
 
-![Dark Poole](https://user-images.githubusercontent.com/13270895/89133355-26b3af80-d4e9-11ea-81cd-eacaa9c78320.png)
+A dark and light theme for Jekyll, inspired by Dash UI for Atom. 🌒☀
 
-Dark Poole is a permanent dark theme of the Poole theme by [@mdo](https://github.com/mdo). I made the theme darker, inspired by [Derek Kedziora's site](https://derekkedziora.com/). Unlike default Poole that utilizes CSS media queries to activate dark mode, the theme will stay dark regardless of the user's preference.
-
-- I added a navbar that is easily customizable. Check out [Development](#development) to see how.
-- I also got rid of the "tagline" in the navbar. I think it looks cleaner without it.
-- Finally, I changed the default font size to 20px. I have 20/20 vision and still thought the original font size was too small.
-
-That's it! I tried to be least intrusive as possible to the Poole code base.
-
-**I noticed that Poole's documentation is slightly outdated and misleading. This documentation will try to address most, if not all, of these issues.**
-
+[![Build Status](https://img.shields.io/travis/bitbrain/braingdx/master.svg?logo=travis&style=flat-square)](https://travis-ci.org/bitbrain/jekyll-dash)
+[![license](https://img.shields.io/github/license/bitbrain/jekyll-dash.svg?style=flat-square)](LICENSE.MD)
+[![Gem](https://img.shields.io/gem/v/jekyll-dash.svg?style=flat)](http://rubygems.org/gems/jekyll-dash "View this project in Rubygems")
+[![Downloads](https://ruby-gem-downloads-badge.herokuapp.com/jekyll-dash)](https://rubygems.org/gems/jekyll-dash "Number of Gem downloads")
 ---
+This theme for [Jekyll](https://jekyllrb.com/) has been inspired by [dash-ui](https://atom.io/themes/dash-ui), a dark theme for [Atom](https://atom.io).
 
-## Contents
+[![design](theme.gif)](http://bitbrain.github.io)
 
-- [Usage](#usage)
-- [Development](#development)
-- [Author](#author)
-- [License](#license)
+## Installation
 
-## Usage
+Add this line to your Jekyll site's `Gemfile`:
 
-### 1. Install dependencies
-
-Poole is built on Jekyll and uses its built-in SCSS compiler to generate our CSS. Before getting started, you'll need to install the Jekyll gem and related dependencies:
-
-```bash
-$ gem install jekyll jekyll-gist jekyll-sitemap jekyll-seo-tag
+For **Jekyll 3**:
+```ruby
+gem 'jekyll-dash', '~> 1.0.0'
 ```
 
-### 2. Install bundler
+> Keep in mind: Github pages generation only supports Jekyll 3.8 right now.
 
-You must have bundler installed. If you already have bundler installed, please skip this step.
-
-```bash
-# Update Rubygems
-$ gem update --system
-# Update bundler
-$ gem install bundler
+For **Jekyll 4**:
+```ruby
+gem 'jekyll-dash', '~> 2.0.0'
 ```
 
-### 3. Running locally
-
-To see your Jekyll site with Poole applied, start a Jekyll server. In Terminal, from `/dark-poole` (or whatever your Jekyll site's root directory is named):
-
-```bash
-$ bundle exec jekyll serve
-```
-
-Open <http://localhost:4000> in your browser, and voilà.
-
-### 4. Serving it up
-
-If you host your code on GitHub, you can use [GitHub Pages](https://pages.github.com) to host your project.
-
-1. Fork this repo and switch to the `gh-pages` branch.
-1. If you're [using a custom domain name](https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages), modify the `CNAME` file to point to your new domain.
-1. If you're not using a custom domain name, **modify the `url` in `_config.yml`** to point to your GitHub Pages URL. Example: for a site hosted at `username.github.io`, use `http://username.github.io`.
-1. If you want to use your repo name as a base url, **set the `url`** to your repo link and **set the `baseurl`** to your repo name in **`_config.yml`**. Example: for site hosted on `https://username.github.io/dark-poole`, set `url` as `https://username.github.io/dark-poole` and `baseurl` as `/dark-poole`.
-1. Done! Head to your GitHub Pages URL or custom domain.
-
-No matter your production or hosting setup, be sure to verify the `baseurl` option file and `CNAME` settings. Not applying this correctly can mean broken styles on your site.
-
-### 5. Pagination for sites with base urls
-
-If you are using a base url for your site, (for example, hosted on `https://username.github.io/dark-poole`) you have to make some changes to get jekyll-pagination to work correctly:
-
-In `_config.yml`, add this line:
+And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-paginate_path: "/baseurl/page:num/"
+theme: jekyll-dash
 ```
 
-In `archive.md`, add `{{ site.baseurl }}` before `{{ post.url }}`
+And then execute:
 
-```html
-<!-- Add "{{ site.baseurl }}" -->
-<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install jekyll-dash -v version
+
+## Configuration
+
+Add the following configuration to your site. Customise it to your needs!
+
+```yaml
+# required by disqus to display comments
+url: https://your-site-url
+
+# jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# jekyll-tagging (optional)
+tag_permalink_style: pretty
+tag_page_layout: tag_page
+tag_page_dir: tag
+
+dash:
+  date_format: "%b %-d, %Y"
+
+  disqus:
+    shortname: <your-disqus-shortname>
+
+  # generate social links in footer
+  # supported colors: green, red, orange, blue, cyan, pink, teal, yellow, indigo, purple
+  social_links:
+    - url: https://twitter.com/bitbrain_
+      icon: twitter-square
+      color: cyan
+    - url: https://bitbrain.itch.io
+      icon: itch-io
+      color: red
+    - url: https://github.com/bitbrain
+      icon: github-square
+      color: purple
+      
+  show_author: true
+
+# Replaces the default avatar provider (gravatar)
+#avatar_source: github
+#github_username: bitbrain
 ```
+## Using this theme directly on Github Pages
 
-In `index.html`, remove the `prepend:`:
+Please keep in mind that Github Pages does only support [a limited list of Jekyll plugins](https://pages.github.com/versions/). You will be able to use this theme on Github Pages but some functionality might not be available, for example displaying tags. In order to use this theme to a full extend, you have to generate the `_site` externally, for example on [TravisCI](https://travis-ci.org). 
 
-```html
-<!-- Remove "prepend:" in "prepend: relative_url" -->
-<a
-  class="pagination-item newer"
-  href="{{ paginator.previous_page_path | relative_url }}"
-  >Newer</a
->
+For example, you want to host your own blog on `https://<username>.github.io`. As a result, you require the following repositories:
+
+* `blog` - contains the actual Jekyll sources ([see example](https://github.com/bitbrain/blog))
+* `<username>.github.io` - contains generated webpage, pushed automatically via TravisCI ([see example](https://github.com/bitbrain/bitbrain.github.io))
+
+You are not required to do this, but keep in mind that some functionality might not be available when using the Jekyll generator on Github directly!
+
+## Additional Features
+
+**Tagging** add the `jekyll/tagging` plugin to your `_config.yml` file to enable tagging. Do not forget to also add the following to your `Gemfile`:
+```Gemfile
+gem "jekyll-tagging"
 ```
+**Gravatar** if you want to display your gravatar picture, add the `liquid-md5` to your `_config.yml` file. Do not forget to also add the following to your `Gemfile`:
+```Gemfile
+gem "liquid-md5"
+```
+## FAQ
+
+> I have configured posts but no posts are showing?
+
+**Solution:** You most probably forgot to configure [jekyll-paginate](https://jekyllrb.com/docs/pagination/) in your _config.yml! Make sure you have the correct configuration as described above!
+
+> I have added the correct configuration for `jekyll-paginate` but it is now complaining about a missing `index.html` file. What do I do?
+
+**Solution** pagination only works with HTML files! Markdown is not supported there. Simply rename your `index.md` into `index.html` - that should do the trick!
+
+> I have configured Disqus via _config.yml but Disqus fails to load on the page? 
+
+**Solution:** Make sure you configure the correct `url` within your `_config.yml`. Also make sure that your domain is trusted by Disqus. This can be configured within Disqus by adding a trusted domain.
+
+> I am using this theme but I don't see any tags?
+
+**Solution**: as described above you have to add the tagging plugin. Additionally, tags do not work natively by Github Pages. You have to build your site on an external CI and push the `_site` artifacts to a hosting repository.
+
+> I am getting an error that Bundler could not find compatible versions for gem
+
+**Solution**
+
+Make sure you are using a version of this theme that is compatible with Jekyll. Version 1.x is only compatible with Jekyll 3.x while Version 2.x is only compatible with Jekyll 4.x.
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/bitbrain/jekyll-dash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
-Poole has two branches, but only one is used for active development.
+To set up your environment to develop this theme, run `bundle install`.
 
-- `master` for development. **All pull requests should be to submitted against `master`.**
-- `gh-pages` for hosted demo **Please avoid using this branch.**
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
 
-CSS is handled via Jeykll's built-in Sass compiler. Source Sass files are located in `_sass/`, included into `styles.scss`, and compile to `styles.css`.
-
-### Customize Navbar
-
-You can easily customize the navbar by tweaking the `_config.yml` file. Simply change the title and url of each of the nav elements, or add more. The order will be preserved in the site.
-
-```yaml
-nav:
-  - title: Blog
-    url: /archive
-
-  - title: About
-    url: /about
-```
-
-## Author
-
-**Mark Otto**
-
-- <https://github.com/mdo>
-- <https://twitter.com/mdo>
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `jekyll-dash.gemspec` accordingly.
 
 ## License
 
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+The theme is available as open source under the terms of the [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
