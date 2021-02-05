@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Photoshop’ta zaman kazanın | ergulburak</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Photoshop’ta zaman kazanın" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="bu makalede, photoshopta iş yükünüzü nasıl hafifletebiliriz? onu inceleyeceğiz." />
+<meta property="og:description" content="bu makalede, photoshopta iş yükünüzü nasıl hafifletebiliriz? onu inceleyeceğiz." />
+<meta property="og:site_name" content="ergulburak" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-10T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Photoshop’ta zaman kazanın" />
+<script type="application/ld+json">
+{"description":"bu makalede, photoshopta iş yükünüzü nasıl hafifletebiliriz? onu inceleyeceğiz.","headline":"Photoshop’ta zaman kazanın","dateModified":"2021-01-10T00:00:00+00:00","datePublished":"2021-01-10T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/01/10/photoshop-scripting.html"},"url":"/2021/01/10/photoshop-scripting.html","author":{"@type":"Person","name":"GitHub User"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/favicon.png" /><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ergulburak" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-3DWR3NTPNX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3DWR3NTPNX');
+</script></head>
+<body><div class="site-header">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">ergulburak<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
+    <span class="social_links">
+        <a class="color-cyan-hover" href="https://twitter.com/BurakERGUL_"><i class="fab fa-twitter-square"></i></a><a class="color-red-hover" href="https://lugreb.itch.io"><i class="fab fa-itch-io"></i></a><a class="color-purple-hover" href="https://github.com/ergulburak"><i class="fab fa-github-square"></i></a><a class="color-red-hover" href="https://www.youtube.com/channel/UCsPgp8dgYeAL8ar4BAOFEEg"><i class="fab fa-youtube"></i></a><a class="color-blue-hover" href="https://www.linkedin.com/in/lugreb/"><i class="fab fa-linkedin"></i></a><a class="color-orange-hover" href="https://www.instagram.com/burake41/"><i class="fab fa-instagram"></i></a>
+    </span>
+  </div>
+</div>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+  <div class="author-box">
+    
+    
+        <img src="
+            https://github.com/ergulburak.png
+        " class="author-avatar" alt="Avatar" />
+    
+Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
+
+</div>
+
+
+<div class="post">
+  <h1 class="post-title">Photoshop'ta zaman kazanın</h1>
+  
+  <div class="post-tags">
+      
+      <a class="tag" href="/tag/photoshop/">photoshop</a>
+      
+      <a class="tag" href="/tag/photoshop scripting/">photoshop scripting</a>
+      
+  </div>
+  
+  <div class="post-date">Published on 10 Jan 2021</div>
+  
+  <noscript>
+    <div class="post-description">bu makalede, photoshopta iş yükünüzü nasıl hafifletebiliriz? onu inceleyeceğiz.</div>
+  </noscript>
+  <div id="animated-post-description" class="post-description" style="display: none;"></div>
+  
+  <p>Photoshop kullanırken bir çok şeyi tekrar tekrar yaptığımız olmuştur. Rutin işlerimiz oluyorsa bu gibi durumlar bize çok fazla zaman kaybettiriyor. Farkına varınca da tadımız iyice kaçıyor. Bende yakın zamanda manga editlemeye başladım, her sayfayı tek tek açıp düzenlemek gerekiyor ama bazı sayfalar birbirleri ile bağlantılı içeriği var. Bunun için <code class="language-plaintext highlighter-rouge">artboard</code> yani çalışma yüzeyi kullanarak resimleri alt alta koyuyordum. 20-30 sayfalık bölümlerde pek anlaşılmasa da 100’ün üzerinde sayfa olduğu zaman, vaktinizin ne kadar kayıp olduğunu anlıyorsunuz.</p>
+
+<p>İnternette:</p>
+<ul>
+  <li>Açılan sayfaları artboard’a çeviren</li>
+  <li>Artboard’ları alt alta hizalayan</li>
+</ul>
+
+<p>bir script araştırdım. <a href="https://community.adobe.com/t5/photoshop/import-images-to-artboards/td-p/8430829">Anton Lyubushkin</a> seçilen dosyaları artboard’a çevirip açan benzer bir script hazırlamış ama yaklaşık 5.5 yıllık olduğu için doğru çalışmıyor. Şimdi gerekli parçaları ele alalım:</p>
+
+<ol>
+  <li>Dosyaları seç, kontrol et ve proje oluştur:
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">fileList</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">openDialog</span><span class="p">(</span><span class="dl">"</span><span class="s2">Bütün manga resimlerini seçiniz.</span><span class="dl">"</span><span class="p">);</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">fileList</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">fileList</span> <span class="o">!=</span> <span class="dl">""</span><span class="p">)</span> <span class="p">{</span>
+ <span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">documents</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="mi">400</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Manga</span><span class="dl">"</span><span class="p">);</span>
+ <span class="c1">//Her dosya için yapılacaklar.</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Her dosya için yapılacaklar:
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">fileList</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="nx">fileList</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span><span class="c1">//seçilen resmi proje olarak açar</span>
+      <span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span><span class="c1">//açılan bütün resimleri numaralandırmak için ismini tutan bir değişken ekledik</span>
+      <span class="kd">var</span> <span class="nx">res</span> <span class="o">=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="s2">.</span><span class="dl">"</span><span class="p">);</span><span class="c1">//. dan sonrasını ayırdık</span>
+      <span class="nx">newArtboard</span><span class="p">(</span><span class="nx">res</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">width</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">height</span><span class="p">.</span><span class="nx">value</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">delta</span><span class="p">);</span><span class="c1">//açılan resim artboarda çevirildi</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">duplicate</span><span class="p">(</span><span class="nx">doc</span><span class="p">,</span> <span class="nx">ElementPlacement</span><span class="p">.</span><span class="nx">INSIDE</span><span class="p">);</span><span class="c1">//projemize artboard'ı kopyaladık</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">activeDocument</span><span class="p">.</span><span class="nx">close</span><span class="p">(</span><span class="nx">SaveOptions</span><span class="p">.</span><span class="nx">DONOTSAVECHANGES</span><span class="p">);</span><span class="c1">//açtığımız resmi kaydetmeden kapattık</span>
+ <span class="p">}</span>
+ <span class="nx">setPositions</span><span class="p">();</span>
+ <span class="nx">alert</span><span class="p">(</span><span class="dl">'</span><span class="s1">Tamamlandı!</span><span class="dl">'</span><span class="p">);</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Dosyaları hizalamak için gereken kod:
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">setPositions</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">doc</span> <span class="o">=</span> <span class="nx">activeDocument</span><span class="p">,</span><span class="nx">layers</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">layers</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">offsetY</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="nx">offsetX</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">l</span> <span class="o">=</span> <span class="nx">layers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">l</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+   <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span> <span class="o">=</span> <span class="nx">layers</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">isArtBoard</span><span class="p">())</span> 
+   <span class="p">{</span>
+      <span class="kd">var</span> <span class="nx">abSize</span> <span class="o">=</span> <span class="nx">getArtboardDimensions</span><span class="p">();</span>
+      <span class="kd">var</span> <span class="nx">Position</span> <span class="o">=</span> <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">bounds</span><span class="p">;</span>
+      <span class="nx">Position</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">-</span> <span class="nx">Position</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+      <span class="nx">Position</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="nx">offsetY</span><span class="p">;</span>
+      <span class="nx">doc</span><span class="p">.</span><span class="nx">activeLayer</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="o">-</span><span class="nx">Position</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="o">-</span><span class="nx">Position</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+      <span class="nx">offsetY</span> <span class="o">+=</span> <span class="nx">abSize</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+      <span class="nx">offsetX</span> <span class="o">+=</span> <span class="nx">abSize</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">isArtBoard</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+   <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Lyr </span><span class="dl">"</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Ordn</span><span class="dl">"</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Trgt</span><span class="dl">"</span><span class="p">));</span>
+   <span class="k">return</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">).</span><span class="nx">getBoolean</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">artboardEnabled</span><span class="dl">"</span><span class="p">));</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">getArtboardDimensions</span><span class="p">()</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+   <span class="nx">ref</span><span class="p">.</span><span class="nx">putEnumerated</span><span class="p">(</span><span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Lyr </span><span class="dl">"</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Ordn</span><span class="dl">"</span><span class="p">),</span> <span class="nx">charIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">Trgt</span><span class="dl">"</span><span class="p">));</span>
+   <span class="kd">var</span> <span class="nx">desc</span> <span class="o">=</span> <span class="nx">executeActionGet</span><span class="p">(</span><span class="nx">ref</span><span class="p">).</span><span class="nx">getObjectValue</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">artboard</span><span class="dl">"</span><span class="p">)).</span><span class="nx">getObjectValue</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">artboardRect</span><span class="dl">"</span><span class="p">));</span>
+   <span class="kd">var</span> <span class="nx">w</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getDouble</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">right</span><span class="dl">"</span><span class="p">))</span> <span class="o">-</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getDouble</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">left</span><span class="dl">"</span><span class="p">));</span>
+   <span class="kd">var</span> <span class="nx">h</span> <span class="o">=</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getDouble</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">bottom</span><span class="dl">"</span><span class="p">))</span> <span class="o">-</span> <span class="nx">desc</span><span class="p">.</span><span class="nx">getDouble</span><span class="p">(</span><span class="nx">stringIDToTypeID</span><span class="p">(</span><span class="dl">"</span><span class="s2">top</span><span class="dl">"</span><span class="p">));</span>
+   <span class="k">return</span> <span class="p">[</span><span class="nx">w</span><span class="p">,</span> <span class="nx">h</span><span class="p">]</span>
+<span class="p">};</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Artboard oluşturmak için gereken kod:
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">newArtboard</span><span class="p">(</span><span class="nx">_name</span><span class="p">,</span> <span class="nx">_w</span><span class="p">,</span> <span class="nx">_h</span><span class="p">,</span> <span class="nx">_x</span><span class="p">,</span> <span class="nx">_y</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">var</span> <span class="nx">desc6</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">ref1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionReference</span><span class="p">();</span>
+<span class="nx">ref1</span><span class="p">.</span><span class="nx">putClass</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">artboardSection</span><span class="dl">'</span><span class="p">));</span>
+<span class="nx">desc6</span><span class="p">.</span><span class="nx">putReference</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">null</span><span class="dl">'</span><span class="p">),</span> <span class="nx">ref1</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">desc7</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="nx">desc7</span><span class="p">.</span><span class="nx">putString</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Nm  </span><span class="dl">'</span><span class="p">),</span> <span class="nx">_name</span><span class="p">);</span>
+<span class="nx">desc6</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Usng</span><span class="dl">'</span><span class="p">),</span> <span class="nx">sTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">artboardSection</span><span class="dl">'</span><span class="p">),</span> <span class="nx">desc7</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">desc8</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ActionDescriptor</span><span class="p">();</span>
+<span class="nx">desc8</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Top </span><span class="dl">'</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">desc8</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Left</span><span class="dl">'</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="nx">desc8</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Btom</span><span class="dl">'</span><span class="p">),</span> <span class="nx">_h</span><span class="p">);</span>
+<span class="nx">desc8</span><span class="p">.</span><span class="nx">putDouble</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Rght</span><span class="dl">'</span><span class="p">),</span> <span class="nx">_w</span><span class="p">);</span>
+<span class="nx">desc6</span><span class="p">.</span><span class="nx">putObject</span><span class="p">(</span><span class="nx">sTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">artboardRect</span><span class="dl">'</span><span class="p">),</span> <span class="nx">sTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">classFloatRect</span><span class="dl">'</span><span class="p">),</span> <span class="nx">desc8</span><span class="p">);</span>
+<span class="nx">executeAction</span><span class="p">(</span><span class="nx">cTID</span><span class="p">(</span><span class="dl">'</span><span class="s1">Mk  </span><span class="dl">'</span><span class="p">),</span> <span class="nx">desc6</span><span class="p">,</span> <span class="nx">DialogModes</span><span class="p">.</span><span class="nx">NO</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <p>Bütün fonksiyonlarımızı tamamladıktan sonra photoshop üzerinden denediğimizde aşağıdaki videoda olduğu gibi çalışır:</p>
+  </li>
+</ol>
+
+<video preload="auto" poster="/assets/img/ps-thumb.png" src="/assets/video/screen-recorder-sat-feb-06-2021-00-03-56.webm" type="video/mp4" autoplay="" controls=""></video>
+
+<p>Videoda problem oluyor ise <a href="https://www.youtube.com/watch?v=msskMjMZeY4">Youtube</a> üzerinden ulaşabilirsiniz. Scriptin tamamına bu <a href="https://github.com/ergulburak/PhotoshopScripts-MangaEditing">Github</a> sayfasından ulaşabilirsiniz. Sorularınız veya önerileriniz için yorum yapmayı unutmayın!</p>
+
+
+</div>
+
+
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+ var disqus_config = function () {
+     this.page.url = '/2021/01/10/photoshop-scripting.html';
+     this.page.identifier = '/2021/01/10/photoshop-scripting';
+     this.page.title = 'Photoshop'ta zaman kazanın';
+ };
+
+ (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+     var d = document, s = d.createElement('script');
+
+     s.src = '//ergulburak-github-io.disqus.com/embed.js';
+
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+
+
+<div class="related">
+  <h2>ilgili makaleler</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2020/12/28/dogum-gunum.html">
+            Bugün benim doğum günüm
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+  
+  <h2>bütün etiketler</h2>
+  <div class="tag-cloud"><a href="/tag/baslang%C4%B1c/" class="set-5">baslangıc</a> <a href="/tag/blog/" class="set-5">blog</a> <a href="/tag/photoshop/" class="set-5">photoshop</a> <a href="/tag/photoshop-scripting/" class="set-5">photoshop scripting</a></div>
+  
+
+
+
+
+<script>
+  let i = 0;
+  const text = 'bu makalede, photoshopta iş yükünüzü nasıl hafifletebiliriz? onu inceleyeceğiz.';
+  const speed = parseInt('50');
+  
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.getElementById('animated-post-description').style.display = 'initial';
+  typeWriter();
+</script>
+
+      </div>
+    </main><footer class="site-footer">
+  <div class="wrapper">
+    <div class="credits">personel blog by <a href="https://github.com/ergulburak">ergulburak</a> made with <i class="fas fa-heart"></i><div class="toggleWrapper">
+    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
+    <label for="theme-toggle" class="toggle">
+    <span class="toggle__handler">
+      <span class="crater crater--1"></span>
+      <span class="crater crater--2"></span>
+      <span class="crater crater--3"></span>
+    </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+    </label>
+</div>
+<script type="text/javascript">
+const theme = localStorage.getItem('theme');
+
+if (theme === "light") {
+    document.documentElement.setAttribute('data-theme', 'light');
+} else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
+
+function activateDarkTheme() {
+    document.getElementById('theme-toggle').checked = true;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.classList.add('theme--dark');
+    document.documentElement.classList.remove('theme--light');
+	document.getElementById("theme-toggle").className = 'light';
+	window.localStorage.setItem('theme', 'dark');
+}
+
+function activateLightTheme() {
+    document.getElementById('theme-toggle').checked = false;
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.add('theme--light');
+    document.documentElement.classList.remove('theme--dark');
+	document.getElementById("theme-toggle").className = 'dark';
+	window.localStorage.setItem('theme', 'light');
+}
+
+if (theme === "dark") {
+    activateDarkTheme();
+} else if (theme === "light") {
+    activateLightTheme();
+} else if  (userPrefers === "light") {
+    activateDarkTheme();
+} else {
+    activateDarkTheme();
+}
+
+function modeSwitcher() {
+	let currentMode = document.documentElement.getAttribute('data-theme');
+	if (currentMode === "dark") {
+	    activateLightTheme();
+	} else {
+	    activateDarkTheme();
+	}
+}
+</script></div>
+  </div>
+</footer>
+
+
+<script>
+      window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      }
+    </script>
+
+  </body>
+
+</html>
