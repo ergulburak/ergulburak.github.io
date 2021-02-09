@@ -87,25 +87,25 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
 <h2 id="test-alanının-oluşturulması">Test alanının oluşturulması</h2>
 <p>Unitydeki küpleri kullanarak aşağıdaki gibi basit bir alan oluşturdum. Etrafında <code class="language-plaintext highlighter-rouge">Collider</code>‘lar bulunuyor. Bu Colliderlar test alanının sınırları, yani oluşturulan hapishane hücresinin duvarları olarak düşünülebilir.</p>
 
-<p><img src="/assets/img/sonsuzluk-1.png" alt="resim1" /></p>
+<p><img src="/assets/img/sonsuzluk-1.PNG" alt="resim1" /></p>
 
 <h2 id="kameranın-sonsuzmuş-gibi-görmesi">Kameranın sonsuzmuş gibi görmesi</h2>
 <p>Kamerada sonsuzmuş gibi görünmesi için haritanin kopyalarını üç boyutlu bir matris oluşturarak merkezde ana harita bulunacak şekilde oluşturdum.</p>
 
-<p><img src="/assets/img/sonsuzluk-3.png" alt="resim2" /></p>
+<p><img src="/assets/img/sonsuzluk-3.PNG" alt="resim2" /></p>
 
 <p>Kameraya <code class="language-plaintext highlighter-rouge">fog</code> vererek uzak yerlerin sis yüzünden görülmemesini sağladım.</p>
 
-<p><img src="/assets/img/sonsuzluk-4.png" alt="resim3" /></p>
+<p><img src="/assets/img/sonsuzluk-4.PNG" alt="resim3" /></p>
 
 <p>Bu sayede sanki sonsuza kadar tekrar eden bir alana bakıyormuş hissiyatı oluştu.</p>
 
-<p><img src="/assets/img/sonsuzluk-5.png" alt="resim4" /></p>
+<p><img src="/assets/img/sonsuzluk-5.PNG" alt="resim4" /></p>
 
 <h2 id="haritanın-otomatik-oluşması">Haritanın otomatik oluşması</h2>
 <p>Her sahne için haritayı böyle ayarlamak çok zaman kaybettireceği için üretici bir script hazırladım.</p>
 
-<p><img src="/assets/img/sonsuzluk-6.png" alt="resim5" /></p>
+<p><img src="/assets/img/sonsuzluk-6.PNG" alt="resim5" /></p>
 
 <p>Yukarıdaki girdileri verince üç boyutlu matris haritamızı oluşturup gerekli <code class="language-plaintext highlighter-rouge">Collider</code>‘ları <code class="language-plaintext highlighter-rouge">tag</code>‘lerini verek oluşturuyor.</p>
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">void</span> <span class="nf">Generate</span><span class="p">(){</span>
@@ -196,7 +196,7 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
 <h2 id="karakterin-ışınlanması">Karakterin ışınlanması</h2>
 <p>İlk olarak <code class="language-plaintext highlighter-rouge">Rigidbody</code>‘si olan basit hareket scripti bulunan karakterimi <code class="language-plaintext highlighter-rouge">trigger</code>‘landığında ışınlayacak bir kod denedim. Işınlanma düzgün çalışmadı ve ufak bir aramayla proje ayarlarından bir ayarın açılması gerektiğini öğrendim(Kırmızı ile işaretli):</p>
 
-<p><img src="/assets/img/sonsuzluk-2.png" alt="resim6" /></p>
+<p><img src="/assets/img/sonsuzluk-2.PNG" alt="resim6" /></p>
 
 <p>Artık düzgün çalışsada bir problem var! Collide olduğunda ışınlanıyor fakat ışınlandığı haritanin öteki ucunda da collider olduğu için tekrar ışınlanıyor. Böylece sonsuza yada ivmemizden fırlayana kadar ışınlanıyoruz. Bunu engellemek için karakterin çapı kadar içeriye ışınlıyorum. Bu olduğunda işe yarasada görüntüde atlama oluyor, yani biri sizi ileriye yarım saniyede itmiş gibi. Bunu çözmek için <code class="language-plaintext highlighter-rouge">triggerExit</code> kullanmayı seçiyorum.</p>
 
@@ -258,7 +258,7 @@ Projeye <a href="https://github.com/ergulburak/unity-sonsuzluk-prototype">github
 
 <h2 id="oynayış-videosu">Oynayış videosu:</h2>
 
-<video preload="auto" poster="/assets/img/sonsuzluk-5.png" src="/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm" type="video/mp4" autoplay="" controls=""></video>
+<video preload="auto" poster="/assets/img/sonsuzluk-5.png" src="/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm" type="video/mp4" controls=""></video>
 
 <p>Videoda problem oluyor ise <a href="https://www.youtube.com/watch?v=7KOiBJUgcvc">Youtube</a> üzerinden ulaşabilirsiniz.</p>
 

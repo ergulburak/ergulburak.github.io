@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-09T19:10:49+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-09T19:23:53+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
 </subtitle><author><name>GitHub User</name></author><entry><title type="html">Unity sonsuzluk temalı çalışmam</title><link href="/2021/02/09/sonsuzluk-tema.html" rel="alternate" type="text/html" title="Unity sonsuzluk temalı çalışmam" /><published>2021-02-09T00:00:00+00:00</published><updated>2021-02-09T00:00:00+00:00</updated><id>/2021/02/09/sonsuzluk-tema</id><content type="html" xml:base="/2021/02/09/sonsuzluk-tema.html">&lt;p&gt;&lt;a href=&quot;https://store.steampowered.com/app/473950/Manifold_Garden/&quot;&gt;Manifold Garden&lt;/a&gt;‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.&lt;/p&gt;
 
 &lt;p&gt;ilk olarak bu sonsuzluk kavramını nasıl işleyeceğimi düşündüm. Karakteri haritanın sonuna geldiğinde, haritanın başına olması gerektiği yere ışınlayarak bunu sağlama kararı aldım. Bu mekanik üzerine düşünerek yapılacaklar listemizi oluşturdum:&lt;/p&gt;
@@ -12,25 +12,25 @@
 &lt;h2 id=&quot;test-alanının-oluşturulması&quot;&gt;Test alanının oluşturulması&lt;/h2&gt;
 &lt;p&gt;Unitydeki küpleri kullanarak aşağıdaki gibi basit bir alan oluşturdum. Etrafında &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Collider&lt;/code&gt;‘lar bulunuyor. Bu Colliderlar test alanının sınırları, yani oluşturulan hapishane hücresinin duvarları olarak düşünülebilir.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-1.png&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-1.PNG&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;kameranın-sonsuzmuş-gibi-görmesi&quot;&gt;Kameranın sonsuzmuş gibi görmesi&lt;/h2&gt;
 &lt;p&gt;Kamerada sonsuzmuş gibi görünmesi için haritanin kopyalarını üç boyutlu bir matris oluşturarak merkezde ana harita bulunacak şekilde oluşturdum.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-3.png&quot; alt=&quot;resim2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-3.PNG&quot; alt=&quot;resim2&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Kameraya &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fog&lt;/code&gt; vererek uzak yerlerin sis yüzünden görülmemesini sağladım.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-4.png&quot; alt=&quot;resim3&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-4.PNG&quot; alt=&quot;resim3&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Bu sayede sanki sonsuza kadar tekrar eden bir alana bakıyormuş hissiyatı oluştu.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-5.png&quot; alt=&quot;resim4&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-5.PNG&quot; alt=&quot;resim4&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;haritanın-otomatik-oluşması&quot;&gt;Haritanın otomatik oluşması&lt;/h2&gt;
 &lt;p&gt;Her sahne için haritayı böyle ayarlamak çok zaman kaybettireceği için üretici bir script hazırladım.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-6.png&quot; alt=&quot;resim5&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-6.PNG&quot; alt=&quot;resim5&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Yukarıdaki girdileri verince üç boyutlu matris haritamızı oluşturup gerekli &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Collider&lt;/code&gt;‘ları &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tag&lt;/code&gt;‘lerini verek oluşturuyor.&lt;/p&gt;
 &lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Generate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
@@ -121,7 +121,7 @@
 &lt;h2 id=&quot;karakterin-ışınlanması&quot;&gt;Karakterin ışınlanması&lt;/h2&gt;
 &lt;p&gt;İlk olarak &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rigidbody&lt;/code&gt;‘si olan basit hareket scripti bulunan karakterimi &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;trigger&lt;/code&gt;‘landığında ışınlayacak bir kod denedim. Işınlanma düzgün çalışmadı ve ufak bir aramayla proje ayarlarından bir ayarın açılması gerektiğini öğrendim(Kırmızı ile işaretli):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-2.png&quot; alt=&quot;resim6&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/sonsuzluk-2.PNG&quot; alt=&quot;resim6&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Artık düzgün çalışsada bir problem var! Collide olduğunda ışınlanıyor fakat ışınlandığı haritanin öteki ucunda da collider olduğu için tekrar ışınlanıyor. Böylece sonsuza yada ivmemizden fırlayana kadar ışınlanıyoruz. Bunu engellemek için karakterin çapı kadar içeriye ışınlıyorum. Bu olduğunda işe yarasada görüntüde atlama oluyor, yani biri sizi ileriye yarım saniyede itmiş gibi. Bunu çözmek için &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;triggerExit&lt;/code&gt; kullanmayı seçiyorum.&lt;/p&gt;
 
@@ -183,7 +183,7 @@ Projeye &lt;a href=&quot;https://github.com/ergulburak/unity-sonsuzluk-prototype
 
 &lt;h2 id=&quot;oynayış-videosu&quot;&gt;Oynayış videosu:&lt;/h2&gt;
 
-&lt;video preload=&quot;auto&quot; poster=&quot;/assets/img/sonsuzluk-5.png&quot; src=&quot;/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm&quot; type=&quot;video/mp4&quot; autoplay=&quot;&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
+&lt;video preload=&quot;auto&quot; poster=&quot;/assets/img/sonsuzluk-5.png&quot; src=&quot;/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm&quot; type=&quot;video/mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
 
 &lt;p&gt;Videoda problem oluyor ise &lt;a href=&quot;https://www.youtube.com/watch?v=7KOiBJUgcvc&quot;&gt;Youtube&lt;/a&gt; üzerinden ulaşabilirsiniz.&lt;/p&gt;</content><author><name>GitHub User</name></author><category term="unity" /><category term="unity3d" /><category term="infinity" /><category term="prototype" /><category term="theme" /><summary type="html">Manifold Garden‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.</summary></entry><entry><title type="html">Manga editlerken vakit kazanın</title><link href="/2021/01/10/photoshop-scripting.html" rel="alternate" type="text/html" title="Manga editlerken vakit kazanın" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>/2021/01/10/photoshop-scripting</id><content type="html" xml:base="/2021/01/10/photoshop-scripting.html">&lt;p&gt;Photoshop kullanırken bir çok şeyi tekrar tekrar yaptığımız olmuştur. Rutin işlerimiz oluyorsa bu gibi durumlar bize çok fazla zaman kaybettiriyor. Farkına varınca da tadımız iyice kaçıyor. Bende yakın zamanda manga editlemeye başladım, her sayfayı tek tek açıp düzenlemek gerekiyor ama bazı sayfalar birbirleri ile bağlantılı içeriği var. Bunun için &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;artboard&lt;/code&gt; yani çalışma yüzeyi kullanarak resimleri alt alta koyuyordum. 20-30 sayfalık bölümlerde pek anlaşılmasa da 100’ün üzerinde sayfa olduğu zaman, vaktinizin ne kadar kayıp olduğunu anlıyorsunuz.&lt;/p&gt;
 
@@ -273,7 +273,7 @@ Projeye &lt;a href=&quot;https://github.com/ergulburak/unity-sonsuzluk-prototype
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;video preload=&quot;auto&quot; poster=&quot;/assets/img/ps-thumb.png&quot; src=&quot;/assets/video/screen-recorder-sat-feb-06-2021-00-03-56.webm&quot; type=&quot;video/mp4&quot; autoplay=&quot;&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
+&lt;video preload=&quot;auto&quot; poster=&quot;/assets/img/ps-thumb.png&quot; src=&quot;/assets/video/screen-recorder-sat-feb-06-2021-00-03-56.webm&quot; type=&quot;video/mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
 
 &lt;p&gt;Videoda problem oluyor ise &lt;a href=&quot;https://www.youtube.com/watch?v=msskMjMZeY4&quot;&gt;Youtube&lt;/a&gt; üzerinden ulaşabilirsiniz. Scriptin tamamına bu &lt;a href=&quot;https://github.com/ergulburak/PhotoshopScripts-MangaEditing&quot;&gt;Github&lt;/a&gt; sayfasından ulaşabilirsiniz. Sorularınız veya önerileriniz için yorum yapmayı unutmayın!&lt;/p&gt;</content><author><name>GitHub User</name></author><category term="photoshop" /><category term="scripting" /><summary type="html">Photoshop kullanırken bir çok şeyi tekrar tekrar yaptığımız olmuştur. Rutin işlerimiz oluyorsa bu gibi durumlar bize çok fazla zaman kaybettiriyor. Farkına varınca da tadımız iyice kaçıyor. Bende yakın zamanda manga editlemeye başladım, her sayfayı tek tek açıp düzenlemek gerekiyor ama bazı sayfalar birbirleri ile bağlantılı içeriği var. Bunun için artboard yani çalışma yüzeyi kullanarak resimleri alt alta koyuyordum. 20-30 sayfalık bölümlerde pek anlaşılmasa da 100’ün üzerinde sayfa olduğu zaman, vaktinizin ne kadar kayıp olduğunu anlıyorsunuz.</summary></entry><entry><title type="html">Bugün benim doğum günüm</title><link href="/2020/12/28/dogum-gunum.html" rel="alternate" type="text/html" title="Bugün benim doğum günüm" /><published>2020-12-28T00:00:00+00:00</published><updated>2020-12-28T00:00:00+00:00</updated><id>/2020/12/28/dogum-gunum</id><content type="html" xml:base="/2020/12/28/dogum-gunum.html">&lt;p&gt;Bloğumu kendi doğum günümde açmak tesadüfen denk geldi. Uzun zamandır açmayı planlıyordum.
 Bundan sonra burada ağırlıklı olarak oyun geliştirme ile ilgili yazılar paylaşacağım.
