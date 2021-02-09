@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Unity sonsuzluk temalı çalışmam | ergulburak</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Unity sonsuzluk temalı çalışmam" />
+<meta name="author" content="GitHub User" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="İçinden çıkmaya çalıştıkça kendimizi aynı yerde bulacağımız bir oyun" />
+<meta property="og:description" content="İçinden çıkmaya çalıştıkça kendimizi aynı yerde bulacağımız bir oyun" />
+<meta property="og:site_name" content="ergulburak" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-02-09T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unity sonsuzluk temalı çalışmam" />
+<script type="application/ld+json">
+{"description":"İçinden çıkmaya çalıştıkça kendimizi aynı yerde bulacağımız bir oyun","headline":"Unity sonsuzluk temalı çalışmam","dateModified":"2021-02-09T00:00:00+00:00","datePublished":"2021-02-09T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/2021/02/09/sonsuzluk-tema.html"},"url":"/2021/02/09/sonsuzluk-tema.html","author":{"@type":"Person","name":"GitHub User"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/png" href="/assets/favicon.png" /><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ergulburak" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-3DWR3NTPNX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3DWR3NTPNX');
+</script></head>
+<body><div class="site-header">
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">ergulburak<b class="command_prompt"></b><b class="blinking_cursor">_</b></a>
+    <span class="social_links">
+        <a class="color-cyan-hover" href="https://twitter.com/BurakERGUL_"><i class="fab fa-twitter-square"></i></a><a class="color-red-hover" href="https://lugreb.itch.io"><i class="fab fa-itch-io"></i></a><a class="color-purple-hover" href="https://github.com/ergulburak"><i class="fab fa-github-square"></i></a><a class="color-red-hover" href="https://www.youtube.com/channel/UCsPgp8dgYeAL8ar4BAOFEEg"><i class="fab fa-youtube"></i></a><a class="color-blue-hover" href="https://www.linkedin.com/in/lugreb/"><i class="fab fa-linkedin"></i></a><a class="color-orange-hover" href="https://www.instagram.com/burake41/"><i class="fab fa-instagram"></i></a>
+    </span>
+  </div>
+</div>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        
+  <div class="author-box">
+    
+    
+        <img src="
+            https://github.com/ergulburak.png
+        " class="author-avatar" alt="Avatar" />
+    
+Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
+
+</div>
+
+
+<div class="post">
+  <h1 class="post-title">Unity sonsuzluk temalı çalışmam</h1>
+  
+  <div class="post-tags">
+      
+      <a class="tag" href="/tag/unity/">unity</a>
+      
+      <a class="tag" href="/tag/unity3d/">unity3d</a>
+      
+      <a class="tag" href="/tag/infinity/">infinity</a>
+      
+      <a class="tag" href="/tag/prototype/">prototype</a>
+      
+      <a class="tag" href="/tag/theme/">theme</a>
+      
+  </div>
+  
+  <div class="post-date">Published on 09 Feb 2021</div>
+  
+  <noscript>
+    <div class="post-description">İçinden çıkmaya çalıştıkça kendimizi aynı yerde bulacağımız bir oyun</div>
+  </noscript>
+  <div id="animated-post-description" class="post-description" style="display: none;"></div>
+  
+  <p><a href="https://store.steampowered.com/app/473950/Manifold_Garden/">Manifold Garden</a>‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.</p>
+
+<p>ilk olarak bu sonsuzluk kavramını nasıl işleyeceğimi düşündüm. Karakteri haritanın sonuna geldiğinde, haritanın başına olması gerektiği yere ışınlayarak bunu sağlama kararı aldım. Bu mekanik üzerine düşünerek yapılacaklar listemizi oluşturdum:</p>
+<ul>
+  <li>Test alanının oluşturulması</li>
+  <li>Kameranın sonsuzmuş gibi görmesi</li>
+  <li>Haritanın otomatik oluşması</li>
+  <li>Karakterin ışınlanması</li>
+</ul>
+
+<h2 id="test-alanının-oluşturulması">Test alanının oluşturulması</h2>
+<p>Unitydeki küpleri kullanarak aşağıdaki gibi basit bir alan oluşturdum. Etrafında <code class="language-plaintext highlighter-rouge">Collider</code>‘lar bulunuyor. Bu Colliderlar test alanının sınırları, yani oluşturulan hapishane hücresinin duvarları olarak düşünülebilir.</p>
+
+<p><img src="/assets/img/sonsuzluk-1.png" alt="resim1" /></p>
+
+<h2 id="kameranın-sonsuzmuş-gibi-görmesi">Kameranın sonsuzmuş gibi görmesi</h2>
+<p>Kamerada sonsuzmuş gibi görünmesi için haritanin kopyalarını üç boyutlu bir matris oluşturarak merkezde ana harita bulunacak şekilde oluşturdum.</p>
+
+<p><img src="/assets/img/sonsuzluk-3.png" alt="resim2" /></p>
+
+<p>Kameraya <code class="language-plaintext highlighter-rouge">fog</code> vererek uzak yerlerin sis yüzünden görülmemesini sağladım.</p>
+
+<p><img src="/assets/img/sonsuzluk-4.png" alt="resim3" /></p>
+
+<p>Bu sayede sanki sonsuza kadar tekrar eden bir alana bakıyormuş hissiyatı oluştu.</p>
+
+<p><img src="/assets/img/sonsuzluk-5.png" alt="resim4" /></p>
+
+<h2 id="haritanın-otomatik-oluşması">Haritanın otomatik oluşması</h2>
+<p>Her sahne için haritayı böyle ayarlamak çok zaman kaybettireceği için üretici bir script hazırladım.</p>
+
+<p><img src="/assets/img/sonsuzluk-6.png" alt="resim5" /></p>
+
+<p>Yukarıdaki girdileri verince üç boyutlu matris haritamızı oluşturup gerekli <code class="language-plaintext highlighter-rouge">Collider</code>‘ları <code class="language-plaintext highlighter-rouge">tag</code>‘lerini verek oluşturuyor.</p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">void</span> <span class="nf">Generate</span><span class="p">(){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">x</span> <span class="p">&lt;</span> <span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">x</span><span class="p">++)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">y</span> <span class="p">&lt;</span> <span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">y</span><span class="p">++)</span>
+        <span class="p">{</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">z</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">z</span> <span class="p">&lt;</span> <span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">z</span><span class="p">++)</span>
+            <span class="p">{</span>
+                <span class="n">GameObject</span> <span class="n">map</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">mapPrefab</span><span class="p">,</span> <span class="n">mapParent</span><span class="p">.</span><span class="n">transform</span><span class="p">);</span>
+                <span class="n">map</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">mapWidth</span> <span class="p">*</span> <span class="n">x</span><span class="p">)-(((</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">*</span> <span class="n">mapWidth</span><span class="p">)/</span><span class="m">2</span><span class="p">),</span> 
+                    <span class="p">(</span><span class="n">mapHeight</span> <span class="p">*</span> <span class="n">y</span><span class="p">)-(((</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">*</span> <span class="n">mapHeight</span><span class="p">)/</span><span class="m">2</span><span class="p">),</span> 
+                    <span class="p">(</span><span class="n">mapDepth</span> <span class="p">*</span> <span class="n">z</span><span class="p">)-(((</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">*</span> <span class="n">mapDepth</span><span class="p">)/</span><span class="m">2</span><span class="p">));</span>
+                        
+                <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="p">==</span> <span class="p">(</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span> <span class="p">&amp;&amp;</span> 
+                    <span class="n">y</span> <span class="p">==</span> <span class="p">(</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span> <span class="p">&amp;&amp;</span>
+                    <span class="n">z</span> <span class="p">==</span> <span class="p">(</span><span class="n">repeatValue</span> <span class="p">*</span> <span class="m">2</span> <span class="p">+</span> <span class="m">1</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="n">GameObject</span> <span class="n">collider</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">=</span><span class="n">Vector3</span><span class="p">.</span><span class="n">zero</span><span class="p">;</span>
+                    <span class="n">collider</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Collider"</span><span class="p">;</span>
+
+                    <span class="n">GameObject</span> <span class="n">forward</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">forward</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Forward"</span><span class="p">;</span>
+                    <span class="n">forward</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Forward"</span><span class="p">;</span>
+                    <span class="n">forward</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="n">mapDepth</span> <span class="p">/</span> <span class="m">2</span><span class="p">);</span>
+                    <span class="n">forward</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderForward</span> <span class="p">=</span> <span class="n">forward</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderForward</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderForward</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">mapWidth</span><span class="p">,</span><span class="n">mapHeight</span><span class="p">,.</span><span class="m">5f</span><span class="p">);</span>
+
+                    <span class="n">GameObject</span> <span class="n">back</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">back</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Back"</span><span class="p">;</span>
+                    <span class="n">back</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Back"</span><span class="p">;</span>
+                    <span class="n">back</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="n">mapDepth</span> <span class="p">/</span> <span class="m">2</span><span class="p">);</span>
+                    <span class="n">back</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderBack</span> <span class="p">=</span> <span class="n">back</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderBack</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderBack</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">mapWidth</span><span class="p">,</span><span class="n">mapHeight</span><span class="p">,.</span><span class="m">5f</span><span class="p">);</span>
+
+                    <span class="n">GameObject</span> <span class="n">right</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">right</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Right"</span><span class="p">;</span>
+                    <span class="n">right</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Right"</span><span class="p">;</span>
+                    <span class="n">right</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">mapWidth</span><span class="p">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+                    <span class="n">right</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderRight</span> <span class="p">=</span> <span class="n">right</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderRight</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderRight</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(.</span><span class="m">5f</span><span class="p">,</span><span class="n">mapHeight</span><span class="p">,</span><span class="n">mapDepth</span><span class="p">);</span>
+
+                    <span class="n">GameObject</span> <span class="n">left</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">left</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Left"</span><span class="p">;</span>
+                    <span class="n">left</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Left"</span><span class="p">;</span>
+                    <span class="n">left</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(-</span><span class="n">mapWidth</span><span class="p">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+                    <span class="n">left</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderLeft</span> <span class="p">=</span> <span class="n">left</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderLeft</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderLeft</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(.</span><span class="m">5f</span><span class="p">,</span><span class="n">mapHeight</span><span class="p">,</span><span class="n">mapDepth</span><span class="p">);</span>
+
+                    <span class="n">GameObject</span> <span class="n">up</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">up</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Up"</span><span class="p">;</span>
+                    <span class="n">up</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Up"</span><span class="p">;</span>
+                    <span class="n">up</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="n">mapHeight</span><span class="p">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+                    <span class="n">up</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderUp</span> <span class="p">=</span> <span class="n">up</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderUp</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderUp</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">mapWidth</span><span class="p">,.</span><span class="m">5f</span><span class="p">,</span><span class="n">mapDepth</span><span class="p">);</span>
+
+                    <span class="n">GameObject</span> <span class="n">down</span> <span class="p">=</span> <span class="nf">Instantiate</span><span class="p">(</span><span class="n">empty</span><span class="p">);</span>
+                    <span class="n">down</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s">"Down"</span><span class="p">;</span>
+                    <span class="n">down</span><span class="p">.</span><span class="n">tag</span> <span class="p">=</span> <span class="s">"Down"</span><span class="p">;</span>
+                    <span class="n">down</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="n">mapHeight</span><span class="p">/</span><span class="m">2</span><span class="p">,</span> <span class="m">0</span><span class="p">);</span>
+                    <span class="n">down</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">parent</span> <span class="p">=</span> <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">;</span>
+                    <span class="n">BoxCollider</span> <span class="n">boxColliderDown</span> <span class="p">=</span> <span class="n">down</span><span class="p">.</span><span class="n">AddComponent</span><span class="p">&lt;</span><span class="n">BoxCollider</span><span class="p">&gt;();</span>
+                    <span class="n">boxColliderDown</span><span class="p">.</span><span class="n">isTrigger</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="n">boxColliderDown</span><span class="p">.</span><span class="n">size</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span><span class="n">mapWidth</span><span class="p">,.</span><span class="m">5f</span><span class="p">,</span><span class="n">mapDepth</span><span class="p">);</span>
+                            
+                    <span class="n">collider</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">=</span><span class="n">map</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>   
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Artık karakterimizi ışınlamaya başlayabiliriz.</p>
+
+<h2 id="karakterin-ışınlanması">Karakterin ışınlanması</h2>
+<p>İlk olarak <code class="language-plaintext highlighter-rouge">Rigidbody</code>‘si olan basit hareket scripti bulunan karakterimi <code class="language-plaintext highlighter-rouge">trigger</code>‘landığında ışınlayacak bir kod denedim. Işınlanma düzgün çalışmadı ve ufak bir aramayla proje ayarlarından bir ayarın açılması gerektiğini öğrendim(Kırmızı ile işaretli):</p>
+
+<p><img src="/assets/img/sonsuzluk-2.png" alt="resim6" /></p>
+
+<p>Artık düzgün çalışsada bir problem var! Collide olduğunda ışınlanıyor fakat ışınlandığı haritanin öteki ucunda da collider olduğu için tekrar ışınlanıyor. Böylece sonsuza yada ivmemizden fırlayana kadar ışınlanıyoruz. Bunu engellemek için karakterin çapı kadar içeriye ışınlıyorum. Bu olduğunda işe yarasada görüntüde atlama oluyor, yani biri sizi ileriye yarım saniyede itmiş gibi. Bunu çözmek için <code class="language-plaintext highlighter-rouge">triggerExit</code> kullanmayı seçiyorum.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">private</span> <span class="k">void</span> <span class="nf">OnTriggerExit</span><span class="p">(</span><span class="n">Collider</span> <span class="n">other</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Forward"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">-</span><span class="n">script</span><span class="p">.</span><span class="n">mapDepth</span><span class="p">+</span><span class="m">1</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Back"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span><span class="p">+</span><span class="n">script</span><span class="p">.</span><span class="n">mapDepth</span><span class="p">-</span><span class="m">1</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Right"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">-</span><span class="n">script</span><span class="p">.</span><span class="n">mapWidth</span><span class="p">+</span><span class="m">1</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Left"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">+</span><span class="n">script</span><span class="p">.</span><span class="n">mapWidth</span><span class="p">-</span><span class="m">1</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Up"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">-</span><span class="n">script</span><span class="p">.</span><span class="n">mapHeight</span><span class="p">+</span><span class="m">1</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="nf">CompareTag</span><span class="p">(</span><span class="s">"Down"</span><span class="p">))</span>
+        <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="n">gameObject</span><span class="p">.</span><span class="n">transform</span><span class="p">.</span><span class="n">position</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Vector3</span><span class="p">(</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">x</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">y</span><span class="p">+</span><span class="n">script</span><span class="p">.</span><span class="n">mapHeight</span><span class="p">-</span><span class="m">1</span><span class="p">,</span>
+                <span class="n">transform</span><span class="p">.</span><span class="n">position</span><span class="p">.</span><span class="n">z</span>
+            <span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Bu sayede karakter triggerdan çıktığında zaten çapı kadar ilerlediği için yumuşak bir şekilde ışınlanmış oluyor.
+Projeye <a href="https://github.com/ergulburak/unity-sonsuzluk-prototype">github</a> üzerinden erişebilirsiniz. Yorumlarınızı ve önerilerinizi eksik etmeyin!</p>
+
+<h2 id="oynayış-videosu">Oynayış videosu:</h2>
+
+<video preload="auto" poster="/assets/img/sonsuzluk-5.png" src="/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm" type="video/mp4" autoplay="" controls=""></video>
+
+<p>Videoda problem oluyor ise <a href="https://www.youtube.com/watch?v=7KOiBJUgcvc">Youtube</a> üzerinden ulaşabilirsiniz.</p>
+
+
+</div>
+
+
+<div class="comments">
+<div id="disqus_thread"></div>
+<script>
+ var disqus_config = function () {
+     this.page.url = '/2021/02/09/sonsuzluk-tema.html';
+     this.page.identifier = '/2021/02/09/sonsuzluk-tema';
+     this.page.title = 'Unity sonsuzluk temalı çalışmam';
+ };
+
+ (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+     var d = document, s = d.createElement('script');
+
+     s.src = '//ergulburak-github-io.disqus.com/embed.js';
+
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+ })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</div>
+
+
+
+
+<div class="related">
+  <h2>ilgili makaleler</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2021/01/10/photoshop-scripting.html">
+            Manga editlerken vakit kazanın
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2020/12/28/dogum-gunum.html">
+            Bugün benim doğum günüm
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+  
+  <h2>bütün etiketler</h2>
+  <div class="tag-cloud"><a href="/tag/baslang%C4%B1c/" class="set-5">baslangıc</a> <a href="/tag/blog/" class="set-5">blog</a> <a href="/tag/infinity/" class="set-5">infinity</a> <a href="/tag/photoshop/" class="set-5">photoshop</a> <a href="/tag/prototype/" class="set-5">prototype</a> <a href="/tag/scripting/" class="set-5">scripting</a> <a href="/tag/theme/" class="set-5">theme</a> <a href="/tag/unity/" class="set-5">unity</a> <a href="/tag/unity3d/" class="set-5">unity3d</a></div>
+  
+
+
+
+
+<script>
+  let i = 0;
+  const text = 'İçinden çıkmaya çalıştıkça kendimizi aynı yerde bulacağımız bir oyun';
+  const speed = parseInt('50');
+  
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById('animated-post-description').innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  document.getElementById('animated-post-description').style.display = 'initial';
+  typeWriter();
+</script>
+
+      </div>
+    </main><footer class="site-footer">
+  <div class="wrapper">
+    <div class="credits">personel blog by <a href="https://github.com/ergulburak">ergulburak</a> made with <i class="fas fa-heart"></i><div class="toggleWrapper">
+    <input type="checkbox" class="dn" id="theme-toggle" onclick="modeSwitcher()" checked />
+    <label for="theme-toggle" class="toggle">
+    <span class="toggle__handler">
+      <span class="crater crater--1"></span>
+      <span class="crater crater--2"></span>
+      <span class="crater crater--3"></span>
+    </span>
+        <span class="star star--1"></span>
+        <span class="star star--2"></span>
+        <span class="star star--3"></span>
+        <span class="star star--4"></span>
+        <span class="star star--5"></span>
+        <span class="star star--6"></span>
+    </label>
+</div>
+<script type="text/javascript">
+const theme = localStorage.getItem('theme');
+
+if (theme === "light") {
+    document.documentElement.setAttribute('data-theme', 'light');
+} else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+}
+const userPrefers = getComputedStyle(document.documentElement).getPropertyValue('content');
+
+function activateDarkTheme() {
+    document.getElementById('theme-toggle').checked = true;
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.documentElement.classList.add('theme--dark');
+    document.documentElement.classList.remove('theme--light');
+	document.getElementById("theme-toggle").className = 'light';
+	window.localStorage.setItem('theme', 'dark');
+}
+
+function activateLightTheme() {
+    document.getElementById('theme-toggle').checked = false;
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.documentElement.classList.add('theme--light');
+    document.documentElement.classList.remove('theme--dark');
+	document.getElementById("theme-toggle").className = 'dark';
+	window.localStorage.setItem('theme', 'light');
+}
+
+if (theme === "dark") {
+    activateDarkTheme();
+} else if (theme === "light") {
+    activateLightTheme();
+} else if  (userPrefers === "light") {
+    activateDarkTheme();
+} else {
+    activateDarkTheme();
+}
+
+function modeSwitcher() {
+	let currentMode = document.documentElement.getAttribute('data-theme');
+	if (currentMode === "dark") {
+	    activateLightTheme();
+	} else {
+	    activateDarkTheme();
+	}
+}
+</script></div>
+  </div>
+</footer>
+
+
+<script>
+      window.FontAwesomeConfig = {
+        searchPseudoElements: true
+      }
+    </script>
+
+  </body>
+
+</html>
