@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-09T19:25:58+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-02-10T17:18:47+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
 </subtitle><author><name>GitHub User</name></author><entry><title type="html">Unity sonsuzluk temalı çalışmam</title><link href="/2021/02/09/sonsuzluk-tema.html" rel="alternate" type="text/html" title="Unity sonsuzluk temalı çalışmam" /><published>2021-02-09T00:00:00+00:00</published><updated>2021-02-09T00:00:00+00:00</updated><id>/2021/02/09/sonsuzluk-tema</id><content type="html" xml:base="/2021/02/09/sonsuzluk-tema.html">&lt;p&gt;&lt;a href=&quot;https://store.steampowered.com/app/473950/Manifold_Garden/&quot;&gt;Manifold Garden&lt;/a&gt;‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.&lt;/p&gt;
 
 &lt;p&gt;ilk olarak bu sonsuzluk kavramını nasıl işleyeceğimi düşündüm. Karakteri haritanın sonuna geldiğinde, haritanın başına olması gerektiği yere ışınlayarak bunu sağlama kararı aldım. Bu mekanik üzerine düşünerek yapılacaklar listemizi oluşturdum:&lt;/p&gt;
@@ -185,7 +185,44 @@ Projeye &lt;a href=&quot;https://github.com/ergulburak/unity-sonsuzluk-prototype
 
 &lt;video preload=&quot;auto&quot; poster=&quot;/assets/img/sonsuzluk-5.PNG&quot; src=&quot;/assets/video/screen-recorder-tue-feb-02-2021-21-58-07.webm&quot; type=&quot;video/mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;
 
-&lt;p&gt;Videoda problem oluyor ise &lt;a href=&quot;https://www.youtube.com/watch?v=7KOiBJUgcvc&quot;&gt;Youtube&lt;/a&gt; üzerinden ulaşabilirsiniz.&lt;/p&gt;</content><author><name>GitHub User</name></author><category term="unity" /><category term="unity3d" /><category term="infinity" /><category term="prototype" /><category term="theme" /><summary type="html">Manifold Garden‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.</summary></entry><entry><title type="html">Manga editlerken vakit kazanın</title><link href="/2021/01/10/photoshop-scripting.html" rel="alternate" type="text/html" title="Manga editlerken vakit kazanın" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>/2021/01/10/photoshop-scripting</id><content type="html" xml:base="/2021/01/10/photoshop-scripting.html">&lt;p&gt;Photoshop kullanırken bir çok şeyi tekrar tekrar yaptığımız olmuştur. Rutin işlerimiz oluyorsa bu gibi durumlar bize çok fazla zaman kaybettiriyor. Farkına varınca da tadımız iyice kaçıyor. Bende yakın zamanda manga editlemeye başladım, her sayfayı tek tek açıp düzenlemek gerekiyor ama bazı sayfalar birbirleri ile bağlantılı içeriği var. Bunun için &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;artboard&lt;/code&gt; yani çalışma yüzeyi kullanarak resimleri alt alta koyuyordum. 20-30 sayfalık bölümlerde pek anlaşılmasa da 100’ün üzerinde sayfa olduğu zaman, vaktinizin ne kadar kayıp olduğunu anlıyorsunuz.&lt;/p&gt;
+&lt;p&gt;Videoda problem oluyor ise &lt;a href=&quot;https://www.youtube.com/watch?v=7KOiBJUgcvc&quot;&gt;Youtube&lt;/a&gt; üzerinden ulaşabilirsiniz.&lt;/p&gt;</content><author><name>GitHub User</name></author><category term="unity" /><category term="unity3d" /><category term="infinity" /><category term="prototype" /><category term="theme" /><summary type="html">Manifold Garden‘ı görünce konseptini çok beğendim. ne yaparsan yap aynı yere geri dönüyordun. Sanki sonsuz bir hapishanenin içine düşülmüş gibi. Buna benzer bir sistem tasarlamak istedim.</summary></entry><entry><title type="html">Editörlüğünü yaptığım manga bölümleri</title><link href="/2021/02/02/editledigim-mangalar.html" rel="alternate" type="text/html" title="Editörlüğünü yaptığım manga bölümleri" /><published>2021-02-02T00:00:00+00:00</published><updated>2021-02-02T00:00:00+00:00</updated><id>/2021/02/02/editledigim-mangalar</id><content type="html" xml:base="/2021/02/02/editledigim-mangalar.html">&lt;h2 id=&quot;warm-wedding&quot;&gt;Warm Wedding&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;254.Bölüm, 275.Bölüm, 278.Bölüm, 289.Bölüm, 290.Bölüm&lt;/li&gt;
+  &lt;li&gt;291.Bölüm, 292.Bölüm, 293.Bölüm, 294.Bölüm, 300.Bölüm&lt;/li&gt;
+  &lt;li&gt;301.Bölüm, 302.Bölüm, 303.Bölüm, 304.Bölüm, 305.Bölüm&lt;/li&gt;
+  &lt;li&gt;308.Bölüm, 309.Bölüm, 310.Bölüm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;to-be-winner&quot;&gt;To be winner&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;31.Bölüm, 32.Bölüm, 33.Bölüm, 33,5.Bölüm, 34.Bölüm&lt;/li&gt;
+  &lt;li&gt;35.Bölüm, 36.Bölüm, 37.Bölüm, 38.Bölüm, 39.Bölüm&lt;/li&gt;
+  &lt;li&gt;40.Bölüm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;princes-private-baby&quot;&gt;Prince’s Private Baby&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;132.Bölüm, 133.Bölüm, 134.Bölüm, 135.Bölüm, 136.Bölüm&lt;/li&gt;
+  &lt;li&gt;137.Bölüm, 138.Bölüm, 139.Bölüm, 140.Bölüm, 141.Bölüm&lt;/li&gt;
+  &lt;li&gt;142.Bölüm, 143.Bölüm, 144.Bölüm, 145.Bölüm, 158.Bölüm&lt;/li&gt;
+  &lt;li&gt;159.Bölüm, 160.Bölüm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;secret-love&quot;&gt;Secret Love&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;41.Bölüm, 42.Bölüm&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;100-day-dating-plan&quot;&gt;100-Day Dating Plan&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;14.Bölüm, 15.Bölüm, 16.Bölüm, 17.Bölüm, 18.Bölüm&lt;/li&gt;
+  &lt;li&gt;19.Bölüm, 20.Bölüm&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>GitHub User</name></author><category term="manga" /><category term="webtoon" /><category term="edit" /><summary type="html">Warm Wedding</summary></entry><entry><title type="html">Manga editlerken vakit kazanın</title><link href="/2021/01/10/photoshop-scripting.html" rel="alternate" type="text/html" title="Manga editlerken vakit kazanın" /><published>2021-01-10T00:00:00+00:00</published><updated>2021-01-10T00:00:00+00:00</updated><id>/2021/01/10/photoshop-scripting</id><content type="html" xml:base="/2021/01/10/photoshop-scripting.html">&lt;p&gt;Photoshop kullanırken bir çok şeyi tekrar tekrar yaptığımız olmuştur. Rutin işlerimiz oluyorsa bu gibi durumlar bize çok fazla zaman kaybettiriyor. Farkına varınca da tadımız iyice kaçıyor. Bende yakın zamanda manga editlemeye başladım, her sayfayı tek tek açıp düzenlemek gerekiyor ama bazı sayfalar birbirleri ile bağlantılı içeriği var. Bunun için &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;artboard&lt;/code&gt; yani çalışma yüzeyi kullanarak resimleri alt alta koyuyordum. 20-30 sayfalık bölümlerde pek anlaşılmasa da 100’ün üzerinde sayfa olduğu zaman, vaktinizin ne kadar kayıp olduğunu anlıyorsunuz.&lt;/p&gt;
 
 &lt;p&gt;İnternette:&lt;/p&gt;
 &lt;ul&gt;
