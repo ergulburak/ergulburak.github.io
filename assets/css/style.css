@@ -4510,7 +4510,8 @@ body {
     background-color: #DAE4ED;
     color: #1E2227; }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0; }
 
@@ -4520,9 +4521,18 @@ body, html {
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1, h2, h3, h4, h5, h6,
-blockquote, pre,
-ul, ol, dl, figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
 .highlight {
   margin-bottom: 10px; }
 
@@ -4533,7 +4543,12 @@ figure {
   width: 100%;
   margin: 0; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #637AFE; }
 
 /**
@@ -4547,8 +4562,11 @@ main {
  * Images
  */
 img {
+  display: block;
   max-width: 100%;
-  vertical-align: middle; }
+  margin-bottom: var(--spacer);
+  border-radius: var(--border-radius);
+  margin: 10px; }
 
 /**
  * Figures
@@ -4562,7 +4580,8 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul,
+ol {
   margin-left: 30px; }
 
 li > ul,
@@ -4576,7 +4595,12 @@ video {
 /**
  * Headings
  */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
   margin-top: 1em;
   margin-bottom: 0.4em;
