@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Editörlüğünü yaptığım manga bölümleri | ergulburak</title>
+<title>Unity kPooling paketinin kullanımı | ergulburak</title>
 <meta name="generator" content="Jekyll v3.9.1" />
-<meta property="og:title" content="Editörlüğünü yaptığım manga bölümleri" />
+<meta property="og:title" content="Unity kPooling paketinin kullanımı" />
 <meta name="author" content="GitHub User" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Choujin X" />
-<meta property="og:description" content="Choujin X" />
+<meta name="description" content="Object-Pooling iş yükünü üstünüzden atabileceğiniz. Özellikle Jam ve Indie oyunlarınızda vaktinizin cebinizde kalmasını sağlayacak şey kPooling." />
+<meta property="og:description" content="Object-Pooling iş yükünü üstünüzden atabileceğiniz. Özellikle Jam ve Indie oyunlarınızda vaktinizin cebinizde kalmasını sağlayacak şey kPooling." />
 <meta property="og:site_name" content="ergulburak" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-05-27T00:00:00+00:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Editörlüğünü yaptığım manga bölümleri" />
+<meta property="twitter:title" content="Unity kPooling paketinin kullanımı" />
 <script type="application/ld+json">
-{"mainEntityOfPage":{"@type":"WebPage","@id":"/2021/05/27/editledigim-mangalar.html"},"@type":"BlogPosting","headline":"Editörlüğünü yaptığım manga bölümleri","dateModified":"2021-05-27T00:00:00+00:00","datePublished":"2021-05-27T00:00:00+00:00","url":"/2021/05/27/editledigim-mangalar.html","author":{"@type":"Person","name":"GitHub User"},"description":"Choujin X","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"/2021/05/27/kpooling-example.html"},"@type":"BlogPosting","headline":"Unity kPooling paketinin kullanımı","dateModified":"2021-05-27T00:00:00+00:00","datePublished":"2021-05-27T00:00:00+00:00","url":"/2021/05/27/kpooling-example.html","author":{"@type":"Person","name":"GitHub User"},"description":"Object-Pooling iş yükünü üstünüzden atabileceğiniz. Özellikle Jam ve Indie oyunlarınızda vaktinizin cebinizde kalmasını sağlayacak şey kPooling.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="icon" type="image/png" href="/assets/favicon.png" /><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="ergulburak" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-3DWR3NTPNX"></script>
@@ -59,99 +59,107 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
 
 
 <div class="post">
-  <h1 class="post-title">Editörlüğünü yaptığım manga bölümleri</h1>
+  <h1 class="post-title">Unity kPooling paketinin kullanımı</h1>
   
   <div class="post-tags">
       
-      <a class="tag" href="/tag/manga/">manga</a>
+      <a class="tag" href="/tag/unity/">unity</a>
       
-      <a class="tag" href="/tag/webtoon/">webtoon</a>
+      <a class="tag" href="/tag/unity3d/">unity3d</a>
       
-      <a class="tag" href="/tag/edit/">edit</a>
+      <a class="tag" href="/tag/infinity/">infinity</a>
+      
+      <a class="tag" href="/tag/object-pooling/">object-pooling</a>
+      
+      <a class="tag" href="/tag/pooling/">pooling</a>
+      
+      <a class="tag" href="/tag/object/">object</a>
+      
+      <a class="tag" href="/tag/kPooling/">kPooling</a>
       
   </div>
   
   <div class="post-date">Published on 27 May 2021</div>
   
-  <h2 id="choujin-x">Choujin X</h2>
+  <noscript>
+    <div class="post-description">Object-Pooling iş yükünü üstünüzden atabileceğiniz. Özellikle Jam ve Indie oyunlarınızda vaktinizin cebinizde kalmasını sağlayacak şey kPooling.</div>
+  </noscript>
+  <div id="animated-post-description" class="post-description" style="display: none;"></div>
+  
+  <p>Eğer önceden pooling sistemi hazırlamadıysak jamlerde yada küçük çaplı bireysel projelerimizde büyük optimizasyon sorunları yaşayabiliriz. Böyle durumlarda elimizin altında <strong>kPooling</strong> paketinin olması vakit kazandıracaktır.</p>
+
+<p>kPooling, Unity için bir object-pooling sistemidir. Flexible generic tip API’ye dayanır ve varsayılan olarak <code class="language-plaintext highlighter-rouge">GameObject</code> türü poolların oluşturulmasını ve yönetilmesini destekler. kPooling ayrıca, hem runtime hem de editör’de C# tipi pooling desteğini basit ama kuvvetli <code class="language-plaintext highlighter-rouge">İşlemci</code> API’ı ile birlikte gelir.</p>
+
+<h2 id="özellikleri">Özellikleri</h2>
 
 <ul>
-  <li>1.Bölüm</li>
+  <li>Herhangi bir C# nesnesi için Flexible pooling API</li>
+  <li>Varsayılan olarak GameObject desteği</li>
+  <li>Custom pool türü yönetimi için API</li>
 </ul>
 
-<h2 id="warm-wedding">Warm Wedding</h2>
+<h2 id="kurulumu">Kurulumu</h2>
 
 <ul>
-  <li>254.Bölüm, 275.Bölüm, 278.Bölüm, 289.Bölüm, 290.Bölüm</li>
-  <li>291.Bölüm, 292.Bölüm, 293.Bölüm, 294.Bölüm, 300.Bölüm</li>
-  <li>301.Bölüm, 302.Bölüm, 303.Bölüm, 304.Bölüm, 305.Bölüm</li>
-  <li>308.Bölüm, 309.Bölüm, 310.Bölüm, 340.Bölüm, 341.Bölüm</li>
-  <li>343.Bölüm, 344.Bölüm, 345.Bölüm, 346.Bölüm, 347.Bölüm</li>
-  <li>348.Bölüm, 349.Bölüm, 350.Bölüm, 351.Bölüm, 352.Bölüm</li>
-  <li>353.Bölüm, 354.Bölüm, 355.Bölüm, 356.Bölüm, 357.Bölüm</li>
-  <li>358.Bölüm, 359.Bölüm, 360.Bölüm, 361.Bölüm, 362.Bölüm</li>
-  <li>363.Bölüm, 364.Bölüm, 365.Bölüm, 366.Bölüm, 367.Bölüm</li>
-  <li>368.Bölüm, 369.Bölüm</li>
+  <li><code class="language-plaintext highlighter-rouge">ProjeDizini/Packages/manifest.json</code> dizinindeki manifest dosyasını açın.</li>
+  <li>İçerisinedeki <code class="language-plaintext highlighter-rouge">dependencies</code> listesine <code class="language-plaintext highlighter-rouge">"com.kink3d.pooling": "https://github.com/Kink3d/kPooling.git"</code> satırını ekleyin.</li>
+  <li>Kayıt edip kapattıktan sonra projeyi açın.</li>
 </ul>
 
-<h2 id="to-be-winner">To be winner</h2>
+<p><img src="/assets/img/kPooling-Example/kPool-2.PNG" alt="resim1" /></p>
+
+<h2 id="kullanımı">Kullanımı</h2>
 
 <ul>
-  <li>31.Bölüm, 32.Bölüm, 33.Bölüm, 33,5.Bölüm, 34.Bölüm</li>
-  <li>35.Bölüm, 36.Bölüm, 37.Bölüm, 38.Bölüm, 39.Bölüm</li>
-  <li>40.Bölüm</li>
+  <li><strong>CreatePool</strong> (Havuz oluşturma)</li>
 </ul>
 
-<h2 id="princes-private-baby">Prince’s Private Baby</h2>
+<p>Havuz oluşturmak için 3 şeye ihtiyacınız var. Bunlar: Ana obje, Anahtar obje, Havuzdaki obje sayısı.
+Örneğimde mermiler için kullanmaya karar verdim. Ana obje ve anahtar obje için mermi prefabini kullanabiliriz. Anahtarla ana obje aynı olabilir. Değişkenlerimiz ve oluşturma metodu resimdeki gibidir:</p>
+
+<p><img src="/assets/img/kPooling-Example/kPool-3.PNG" alt="resim1" /></p>
 
 <ul>
-  <li>132.Bölüm, 133.Bölüm, 134.Bölüm, 135.Bölüm, 136.Bölüm</li>
-  <li>137.Bölüm, 138.Bölüm, 139.Bölüm, 140.Bölüm, 141.Bölüm</li>
-  <li>142.Bölüm, 143.Bölüm, 144.Bölüm, 145.Bölüm, 158.Bölüm</li>
-  <li>159.Bölüm, 160.Bölüm, 236.Bölüm, 237.Bölüm, 238.Bölüm</li>
-  <li>239.Bölüm,</li>
+  <li><strong>TryGetInstance</strong> (Havuzdan nesne çağırma)</li>
 </ul>
 
-<h2 id="secret-love">Secret Love</h2>
+<p>Bu metodu kullana bilmek için iki değişkene ihtiyacımız var. Birincisi anahtar, ki anahtarı az önce oluşturduk. İkincisi de çağırılan objenin yazılacağı değişen, onu da önceki resimde instanceProjectile olarak tanımladık. Metod bittikten sonra aşağıdaki gibi gözükecek:</p>
+
+<p><img src="/assets/img/kPooling-Example/kPool-4.PNG" alt="resim1" /></p>
 
 <ul>
-  <li>41.Bölüm, 42.Bölüm, 42,5.Bölüm, 43.Bölüm, 43,5.Bölüm</li>
+  <li><strong>ReturnInstance</strong> (Nesneyi geri gönderme)</li>
 </ul>
 
-<h2 id="100-day-dating-plan">100-Day Dating Plan</h2>
+<p>Mermi ile işimiz bittikten sonra havuza tekrar geri yollamak için bu metodu kullanıyoruz. Yine metodu kullanabilmek için anahtara ve göndereceğimiz objeye ihtiyacımız var. Mermi ömrünü tamamladığında aşağıdaki gibi geri havuza gönderiliyor:</p>
 
-<ul>
-  <li>14.Bölüm, 15.Bölüm, 16.Bölüm, 17.Bölüm, 18.Bölüm</li>
-  <li>19.Bölüm, 20.Bölüm</li>
-</ul>
+<p><img src="/assets/img/kPooling-Example/kPool-5.PNG" alt="resim1" /></p>
 
-<h2 id="jujutsu-kaisen">Jujutsu Kaisen</h2>
+<p>Projeyi <a href="https://github.com/ergulburak/kPooling-Example">Github</a> üzerinden inceleyebilirsiniz.</p>
 
-<ul>
-  <li>1.Bölüm, 20.Bölüm, 21.Bölüm, 22.Bölüm, 23.Bölüm</li>
-  <li>25.Bölüm, 26.Bölüm, 54.Bölüm, 55.Bölüm, 60.Bölüm</li>
-  <li>80.Bölüm, 82.Bölüm, 99.Bölüm, 100.Bölüm, 101.Bölüm</li>
-  <li>120.Bölüm, 121.Bölüm, 122.Bölüm, 123.Bölüm, 124.Bölüm</li>
-  <li>125.Bölüm, 126.Bölüm, 127.Bölüm, 128.Bölüm, 129.Bölüm</li>
-  <li>139.Bölüm, 140.Bölüm, 141.Bölüm, 142.Bölüm, 143.Bölüm</li>
-  <li>144.Bölüm, 145.Bölüm, 146.Bölüm, 147.Bölüm, 148.Bölüm</li>
-  <li>149.Bölüm</li>
-</ul>
+<h2 id="örnek-videosu">Örnek videosu:</h2>
 
-<h2 id="safely-endangered">Safely Endangered</h2>
+<style>
+    .embed-youtube {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+    
+    .embed-youtube iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
-<ul>
-  <li>101.Bölüm, 102.Bölüm, 103.Bölüm, 104.Bölüm, 105.Bölüm</li>
-  <li>106.Bölüm, 107.Bölüm, 108.Bölüm, 109.Bölüm, 110.Bölüm</li>
-  <li>111.Bölüm, 112.Bölüm, 113.Bölüm, 114.Bölüm, 115.Bölüm</li>
-  <li>116.Bölüm, 117.Bölüm, 118.Bölüm, 119.Bölüm, 120.Bölüm</li>
-  <li>121.Bölüm, 122.Bölüm, 123.Bölüm, 124.Bölüm, 125.Bölüm</li>
-  <li>126.Bölüm, 127.Bölüm, 128.Bölüm, 129.Bölüm, 130.Bölüm</li>
-  <li>131.Bölüm, 132.Bölüm, 133.Bölüm, 134.Bölüm, 135.Bölüm</li>
-  <li>136.Bölüm, 137.Bölüm, 138.Bölüm, 139.Bölüm, 140.Bölüm</li>
-  <li>141.Bölüm, 142.Bölüm, 143.Bölüm, 144.Bölüm, 145.Bölüm</li>
-  <li>146.Bölüm, 147.Bölüm, 148.Bölüm, 149.Bölüm, 150.Bölüm</li>
-</ul>
+<div class="embed-youtube">
+    <iframe src="https://www.youtube.com/embed/FQ1TJPFPE7c" width="560" height="315" frameborder="0" allowfullscreen="">
+    </iframe>
+</div>
 
 
 </div>
@@ -161,9 +169,9 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
 <div id="disqus_thread"></div>
 <script>
  var disqus_config = function () {
-     this.page.url = '/2021/05/27/editledigim-mangalar.html';
-     this.page.identifier = '/2021/05/27/editledigim-mangalar';
-     this.page.title = 'Editörlüğünü yaptığım manga bölümleri';
+     this.page.url = '/2021/05/27/kpooling-example.html';
+     this.page.identifier = '/2021/05/27/kpooling-example';
+     this.page.title = 'Unity kPooling paketinin kullanımı';
  };
 
  (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
@@ -196,8 +204,8 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
     
       <li>
         <h3>
-          <a href="/2021/05/27/kpooling-example.html">
-            Unity kPooling paketinin kullanımı
+          <a href="/2021/05/27/editledigim-mangalar.html">
+            Editörlüğünü yaptığım manga bölümleri
           </a>
         </h3>
       </li>
@@ -226,7 +234,7 @@ Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amat�
 
 <script>
   let i = 0;
-  const text = '';
+  const text = 'Object-Pooling iş yükünü üstünüzden atabileceğiniz. Özellikle Jam ve Indie oyunlarınızda vaktinizin cebinizde kalmasını sağlayacak şey kPooling.';
   const speed = parseInt('50');
   
   function typeWriter() {

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-27T22:13:08+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-27T22:17:28+00:00</updated><id>/feed.xml</id><title type="html">ergulburak</title><subtitle>Merhaba, ben Burak. Bilgisayar Mühendisliği son sınıf öğrencisiyim.  Amatör olarak 4 yıldır oyun geliştirme ile ilgileniyorum. Burada oyun  geliştirme ve mobil uygulama hakkında öğretici içerikler paylaşmayı düşünüyorum.
 </subtitle><author><name>GitHub User</name></author><entry><title type="html">Editörlüğünü yaptığım manga bölümleri</title><link href="/2021/05/27/editledigim-mangalar.html" rel="alternate" type="text/html" title="Editörlüğünü yaptığım manga bölümleri" /><published>2021-05-27T00:00:00+00:00</published><updated>2021-05-27T00:00:00+00:00</updated><id>/2021/05/27/editledigim-mangalar</id><content type="html" xml:base="/2021/05/27/editledigim-mangalar.html">&lt;h2 id=&quot;choujin-x&quot;&gt;Choujin X&lt;/h2&gt;
 
 &lt;ul&gt;
@@ -77,7 +77,80 @@
   &lt;li&gt;136.Bölüm, 137.Bölüm, 138.Bölüm, 139.Bölüm, 140.Bölüm&lt;/li&gt;
   &lt;li&gt;141.Bölüm, 142.Bölüm, 143.Bölüm, 144.Bölüm, 145.Bölüm&lt;/li&gt;
   &lt;li&gt;146.Bölüm, 147.Bölüm, 148.Bölüm, 149.Bölüm, 150.Bölüm&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>GitHub User</name></author><category term="manga" /><category term="webtoon" /><category term="edit" /><summary type="html">Choujin X</summary></entry><entry><title type="html">Redaktörlüğünü yaptığım manga bölümleri</title><link href="/2021/05/27/redaktorledigim-mangalar.html" rel="alternate" type="text/html" title="Redaktörlüğünü yaptığım manga bölümleri" /><published>2021-05-27T00:00:00+00:00</published><updated>2021-05-27T00:00:00+00:00</updated><id>/2021/05/27/redaktorledigim-mangalar</id><content type="html" xml:base="/2021/05/27/redaktorledigim-mangalar.html">&lt;h2 id=&quot;survive-romance&quot;&gt;Survive Romance&lt;/h2&gt;
+&lt;/ul&gt;</content><author><name>GitHub User</name></author><category term="manga" /><category term="webtoon" /><category term="edit" /><summary type="html">Choujin X</summary></entry><entry><title type="html">Unity kPooling paketinin kullanımı</title><link href="/2021/05/27/kpooling-example.html" rel="alternate" type="text/html" title="Unity kPooling paketinin kullanımı" /><published>2021-05-27T00:00:00+00:00</published><updated>2021-05-27T00:00:00+00:00</updated><id>/2021/05/27/kpooling-example</id><content type="html" xml:base="/2021/05/27/kpooling-example.html">&lt;p&gt;Eğer önceden pooling sistemi hazırlamadıysak jamlerde yada küçük çaplı bireysel projelerimizde büyük optimizasyon sorunları yaşayabiliriz. Böyle durumlarda elimizin altında &lt;strong&gt;kPooling&lt;/strong&gt; paketinin olması vakit kazandıracaktır.&lt;/p&gt;
+
+&lt;p&gt;kPooling, Unity için bir object-pooling sistemidir. Flexible generic tip API’ye dayanır ve varsayılan olarak &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;GameObject&lt;/code&gt; türü poolların oluşturulmasını ve yönetilmesini destekler. kPooling ayrıca, hem runtime hem de editör’de C# tipi pooling desteğini basit ama kuvvetli &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;İşlemci&lt;/code&gt; API’ı ile birlikte gelir.&lt;/p&gt;
+
+&lt;h2 id=&quot;özellikleri&quot;&gt;Özellikleri&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Herhangi bir C# nesnesi için Flexible pooling API&lt;/li&gt;
+  &lt;li&gt;Varsayılan olarak GameObject desteği&lt;/li&gt;
+  &lt;li&gt;Custom pool türü yönetimi için API&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kurulumu&quot;&gt;Kurulumu&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ProjeDizini/Packages/manifest.json&lt;/code&gt; dizinindeki manifest dosyasını açın.&lt;/li&gt;
+  &lt;li&gt;İçerisinedeki &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencies&lt;/code&gt; listesine &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;com.kink3d.pooling&quot;: &quot;https://github.com/Kink3d/kPooling.git&quot;&lt;/code&gt; satırını ekleyin.&lt;/li&gt;
+  &lt;li&gt;Kayıt edip kapattıktan sonra projeyi açın.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/kPooling-Example/kPool-2.PNG&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;kullanımı&quot;&gt;Kullanımı&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;CreatePool&lt;/strong&gt; (Havuz oluşturma)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Havuz oluşturmak için 3 şeye ihtiyacınız var. Bunlar: Ana obje, Anahtar obje, Havuzdaki obje sayısı.
+Örneğimde mermiler için kullanmaya karar verdim. Ana obje ve anahtar obje için mermi prefabini kullanabiliriz. Anahtarla ana obje aynı olabilir. Değişkenlerimiz ve oluşturma metodu resimdeki gibidir:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/kPooling-Example/kPool-3.PNG&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;TryGetInstance&lt;/strong&gt; (Havuzdan nesne çağırma)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bu metodu kullana bilmek için iki değişkene ihtiyacımız var. Birincisi anahtar, ki anahtarı az önce oluşturduk. İkincisi de çağırılan objenin yazılacağı değişen, onu da önceki resimde instanceProjectile olarak tanımladık. Metod bittikten sonra aşağıdaki gibi gözükecek:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/kPooling-Example/kPool-4.PNG&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ReturnInstance&lt;/strong&gt; (Nesneyi geri gönderme)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mermi ile işimiz bittikten sonra havuza tekrar geri yollamak için bu metodu kullanıyoruz. Yine metodu kullanabilmek için anahtara ve göndereceğimiz objeye ihtiyacımız var. Mermi ömrünü tamamladığında aşağıdaki gibi geri havuza gönderiliyor:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/kPooling-Example/kPool-5.PNG&quot; alt=&quot;resim1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Projeyi &lt;a href=&quot;https://github.com/ergulburak/kPooling-Example&quot;&gt;Github&lt;/a&gt; üzerinden inceleyebilirsiniz.&lt;/p&gt;
+
+&lt;h2 id=&quot;örnek-videosu&quot;&gt;Örnek videosu:&lt;/h2&gt;
+
+&lt;style&gt;
+    .embed-youtube {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 25px;
+        height: 0;
+    }
+    
+    .embed-youtube iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+&lt;/style&gt;
+
+&lt;div class=&quot;embed-youtube&quot;&gt;
+    &lt;iframe src=&quot;https://www.youtube.com/embed/FQ1TJPFPE7c&quot; width=&quot;560&quot; height=&quot;315&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;</content><author><name>GitHub User</name></author><category term="unity" /><category term="unity3d" /><category term="infinity" /><category term="object-pooling" /><category term="pooling" /><category term="object" /><category term="kPooling" /><summary type="html">Eğer önceden pooling sistemi hazırlamadıysak jamlerde yada küçük çaplı bireysel projelerimizde büyük optimizasyon sorunları yaşayabiliriz. Böyle durumlarda elimizin altında kPooling paketinin olması vakit kazandıracaktır.</summary></entry><entry><title type="html">Redaktörlüğünü yaptığım manga bölümleri</title><link href="/2021/05/27/redaktorledigim-mangalar.html" rel="alternate" type="text/html" title="Redaktörlüğünü yaptığım manga bölümleri" /><published>2021-05-27T00:00:00+00:00</published><updated>2021-05-27T00:00:00+00:00</updated><id>/2021/05/27/redaktorledigim-mangalar</id><content type="html" xml:base="/2021/05/27/redaktorledigim-mangalar.html">&lt;h2 id=&quot;survive-romance&quot;&gt;Survive Romance&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;1.Bölüm, 2.Bölüm, 3.Bölüm, 4.Bölüm, 5.Bölüm&lt;/li&gt;
