@@ -1,0 +1,50 @@
+export type Lang = 'en' | 'tr';
+
+export const dict = {
+  en: {
+    navHome: 'home', navBlog: 'blog', navResume: 'resume',
+    whoami1: 'Burak Ergül — Senior Unity & C# Developer @ Marker Games',
+    whoami2: 'systems architecture · multiplayer · performance',
+    readBlog: 'READ BLOG', viewResume: 'VIEW RESUME',
+    cmdkHint: 'press ⌘K to search',
+    posts: 'POSTS', allTag: 'all',
+    copyCode: 'COPY', prevPost: 'PREV', nextPost: 'NEXT',
+    role: 'SENIOR UNITY & C# DEVELOPER', downloadCv: 'DOWNLOAD CV', experience: 'EXPERIENCE', now: 'NOW',
+    markerRole: 'Game Developer — Unity',
+    marker1: 'Networked co-op traversal: ledge climbing carrying another player',
+    marker2: 'Impostor-based rendering to slash draw cost on dense scenes',
+    marker3: 'SOLID-first C# architecture across gameplay systems',
+    patikaDesc: 'Hyper-casual game development intensive; rapid prototyping under publisher constraints.',
+    escreatRole: 'Game / Software Developer',
+    umayRole: 'Software Developer · Independent',
+    umayDesc: 'Early game & tooling work; Photoshop scripting pipeline for manga editing workflow.',
+    eduRole: 'B.Sc. Computer Engineering',
+    eduDesc: '4 years of game development alongside the degree; led visual design for a university community.',
+    stack: 'TECH STACK',
+    palettePosts: 'POSTS', palettePages: 'PAGES', paletteGo: 'GO TO',
+    paletteNav: 'navigate', paletteOpen: 'open', paletteClose: 'close'
+  },
+  tr: {
+    navHome: 'anasayfa', navBlog: 'blog', navResume: 'özgeçmiş',
+    whoami1: 'Burak Ergül — Kıdemli Unity & C# Geliştirici @ Marker Games',
+    whoami2: 'sistem mimarisi · multiplayer · performans',
+    readBlog: 'BLOGU OKU', viewResume: 'ÖZGEÇMİŞİ GÖR',
+    cmdkHint: 'aramak için ⌘K',
+    posts: 'YAZI', allTag: 'tümü',
+    copyCode: 'KOPYALA', prevPost: 'ÖNCEKİ', nextPost: 'SONRAKİ',
+    role: 'KIDEMLİ UNITY & C# GELİŞTİRİCİ', downloadCv: 'CV İNDİR', experience: 'DENEYİM', now: 'ŞİMDİ',
+    markerRole: 'Oyun Geliştirici — Unity',
+    marker1: 'Network co-op traversal: başka bir oyuncuyu taşıyarak ledge climbing',
+    marker2: 'Yoğun sahnelerde draw maliyetini düşüren imposter rendering',
+    marker3: 'Gameplay sistemlerinde SOLID öncelikli C# mimarisi',
+    patikaDesc: 'Hyper-casual oyun geliştirme yoğun programı; yayıncı kısıtları altında hızlı prototipleme.',
+    escreatRole: 'Oyun / Yazılım Geliştirici',
+    umayRole: 'Yazılım Geliştirici · Serbest',
+    umayDesc: 'Erken dönem oyun ve araç geliştirme; manga edit akışı için Photoshop scripting pipeline.',
+    eduRole: 'Bilgisayar Mühendisliği Lisans',
+    eduDesc: 'Lisansla birlikte 4 yıl oyun geliştirme; üniversite topluluğunda görsel tasarım liderliği.',
+    stack: 'TEKNOLOJİ YIĞINI',
+    palettePosts: 'YAZILAR', palettePages: 'SAYFALAR', paletteGo: 'GİT',
+    paletteNav: 'gezin', paletteOpen: 'aç', paletteClose: 'kapat'
+  }
+};
