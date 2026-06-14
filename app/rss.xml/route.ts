@@ -5,7 +5,7 @@ export const dynamic = 'force-static';
 
 export async function GET() {
   const posts = getAllPosts();
-  const siteUrl = 'https://ergulburak.github.io';
+  const siteUrl = 'https://ergulburak.com';
 
   const rssItems = posts
     .map((post) => {
