@@ -33,7 +33,7 @@ export function CodeBlock({ children, className }: { children: string; className
     return lines.map((line, i) => {
       // Very naive regex highlighting. In a real project, use prismjs or shiki.
       // keyword, string, function, type, number, comment
-      let highlighted = line
+      const highlighted = line
         .replace(/(\/\/.+)/g, '<span class="text-[var(--color-syntax-comment)]">$1</span>')
         .replace(/(["'].*?["'])/g, '<span class="text-[var(--color-syntax-string)]">$1</span>')
         .replace(/\b(public|private|protected|internal|static|async|await|var|class|struct|interface|enum|return|if|else|for|foreach|while|switch|case|break|continue|new|null|true|false)\b/g, '<span class="text-[var(--color-syntax-keyword)]">$1</span>')

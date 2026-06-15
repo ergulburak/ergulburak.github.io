@@ -27,7 +27,7 @@ export function ArticleReader({ post, prevPost, nextPost }: Props) {
   }
 
   return (
-    <div className="w-full max-w-[680px] flex flex-col gap-[22px] py-[56px] px-[36px] pb-[70px]">
+    <div className="w-full max-w-[680px] flex flex-col gap-[22px] py-[30px] sm:py-[56px] px-4 sm:px-[36px] pb-[70px]">
       
       {/* Header */}
       <div className="flex gap-[8px] flex-wrap">
@@ -53,20 +53,22 @@ export function ArticleReader({ post, prevPost, nextPost }: Props) {
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
-            p: ({ node, ...props }) => <p className="m-0" {...props} />,
-            a: ({ node, ...props }) => <a className="text-[var(--color-accent)] hover:underline" {...props} />,
-            h1: ({ node, ...props }) => <h1 className="font-bold text-[32px] text-[var(--color-text-primary)] mt-8 mb-4" {...props} />,
-            h2: ({ node, ...props }) => <h2 className="font-bold text-[28px] text-[var(--color-text-primary)] mt-8 mb-4" {...props} />,
-            h3: ({ node, ...props }) => <h3 className="font-bold text-[24px] text-[var(--color-text-primary)] mt-6 mb-3" {...props} />,
-            ul: ({ node, ...props }) => <ul className="list-disc pl-6" {...props} />,
-            ol: ({ node, ...props }) => <ol className="list-decimal pl-6" {...props} />,
-            li: ({ node, ...props }) => <li className="mb-2" {...props} />,
-            blockquote: ({ node, ...props }) => <blockquote className="border-l-4 border-[var(--color-border-subtle)] pl-4 italic text-[var(--color-text-dim)]" {...props} />,
+            p: ({ ...props }) => <p className="m-0" {...props} />,
+            a: ({ ...props }) => <a className="text-[var(--color-accent)] hover:underline" {...props} />,
+            h1: ({ ...props }) => <h1 className="font-bold text-[32px] text-[var(--color-text-primary)] mt-8 mb-4" {...props} />,
+            h2: ({ ...props }) => <h2 className="font-bold text-[28px] text-[var(--color-text-primary)] mt-8 mb-4" {...props} />,
+            h3: ({ ...props }) => <h3 className="font-bold text-[24px] text-[var(--color-text-primary)] mt-6 mb-3" {...props} />,
+            ul: ({ ...props }) => <ul className="list-disc pl-6" {...props} />,
+            ol: ({ ...props }) => <ol className="list-decimal pl-6" {...props} />,
+            li: ({ ...props }) => <li className="mb-2" {...props} />,
+            blockquote: ({ ...props }) => <blockquote className="border-l-4 border-[var(--color-border-subtle)] pl-4 italic text-[var(--color-text-dim)]" {...props} />,
             pre: ({ children }) => <>{children}</>,
-            code({ node, inline, className, children, ...props }: any) {
+            code({ className, children, ...props }: React.ComponentPropsWithoutRef<'code'> & { inline?: boolean }) {
               const match = /language-(\w+)/.exec(className || '');
               
-              if (!inline && match) {
+              const isInline = props.hasOwnProperty('inline') ? (props as any).inline : false;
+              
+              if (!isInline && match) {
                 return (
                   <CodeBlock className={className}>
                     {String(children).replace(/\n$/, '')}
@@ -92,9 +94,9 @@ export function ArticleReader({ post, prevPost, nextPost }: Props) {
       <div className="h-[1px] bg-[var(--color-border-hairline)] w-full mt-[8px]"></div>
 
       {/* Footer Prev/Next */}
-      <div className="flex justify-between font-mono text-[12px]">
+      <div className="flex flex-col sm:flex-row justify-between gap-4 sm:gap-0 font-mono text-[12px]">
         {prevPost ? (
-          <Link href={`/blog/${prevPost.slug}`} className="text-[var(--color-text-faint)] hover:text-[var(--color-text-primary)] transition-colors">
+          <Link href={`/blog/${prevPost.slug}`} className="text-[var(--color-text-faint)] hover:text-[var(--color-text-primary)] transition-colors truncate max-w-full sm:max-w-[45%]">
             ← {t.prevPost}: {prevPost.title[lang] || prevPost.title.tr}
           </Link>
         ) : (
@@ -102,7 +104,7 @@ export function ArticleReader({ post, prevPost, nextPost }: Props) {
         )}
         
         {nextPost ? (
-          <Link href={`/blog/${nextPost.slug}`} className="text-[var(--color-accent)] hover:text-[var(--color-text-primary)] transition-colors">
+          <Link href={`/blog/${nextPost.slug}`} className="text-[var(--color-accent)] hover:text-[var(--color-text-primary)] transition-colors text-left sm:text-right truncate max-w-full sm:max-w-[45%]">
             {t.nextPost}: {nextPost.title[lang] || nextPost.title.tr} →
           </Link>
         ) : (

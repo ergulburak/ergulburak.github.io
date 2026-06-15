@@ -43,3 +43,6 @@ next-env.d.ts
 # design spec mockup (not part of the deployed site)
 /Terminal Portfolio Spec.dc.html
 /support.js
+
+# local blog posts
+/content/blog/comprehensive-demo.md

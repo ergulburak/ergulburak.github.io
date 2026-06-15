@@ -18,11 +18,11 @@ export function BlogClient({ posts }: { posts: PostMeta[] }) {
 
   // Pagination could be added here if needed, but for now we list all filtered
   return (
-    <div className="w-full max-w-[860px] flex flex-col gap-[26px] py-[48px] px-[36px] pb-[60px]">
+    <div className="w-full max-w-[860px] flex flex-col gap-[26px] py-[30px] sm:py-[48px] px-4 sm:px-[36px] pb-[60px]">
       
       {/* Header */}
-      <div className="flex justify-between items-baseline">
-        <h1 className="font-sans text-[38px] font-bold m-0 leading-none">
+      <div className="flex flex-col sm:flex-row justify-between sm:items-baseline gap-2 sm:gap-0">
+        <h1 className="font-sans text-[32px] sm:text-[38px] font-bold m-0 leading-none">
           blog<span className="text-[var(--color-accent)]">/</span>
         </h1>
         <div className="font-mono text-[12px] text-[var(--color-text-faint)]">
@@ -58,26 +58,29 @@ export function BlogClient({ posts }: { posts: PostMeta[] }) {
       </div>
 
       {/* Posts List */}
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-4 sm:gap-0">
         {filteredPosts.map(post => (
           <Link 
             key={post.slug} 
             href={`/blog/${post.slug}`}
-            className="group grid grid-cols-[120px_1fr_auto] gap-[20px] items-baseline p-[20px_18px] border-b border-[var(--color-border-hairline)] last:border-b-0 rounded-[10px] hover:bg-[#111614] hover:border-[rgba(52,211,153,0.3)] transition-colors"
+            className="group flex flex-col sm:grid sm:grid-cols-[120px_1fr_auto] gap-2 sm:gap-[20px] sm:items-baseline p-[16px] sm:p-[20px_18px] border sm:border-b border-[var(--color-border-hairline)] sm:border-t-0 sm:border-x-0 sm:last:border-b-0 rounded-[10px] bg-[#0E1311] sm:bg-transparent hover:bg-[#111614] active:bg-[#111614] hover:border-[rgba(52,211,153,0.3)] active:border-[rgba(52,211,153,0.3)] transition-colors"
           >
-            <div className="font-mono text-[12px] text-[var(--color-text-faint)] group-hover:text-[var(--color-accent)] transition-colors">
-              {post.date}
+            <div className="font-mono text-[12px] text-[var(--color-text-faint)] group-hover:text-[var(--color-accent)] group-active:text-[var(--color-accent)] transition-colors flex justify-between sm:block">
+              <span>{post.date}</span>
+              <span className="sm:hidden font-mono text-[11px] text-[var(--color-text-faint)] group-hover:text-[var(--color-accent)] group-active:text-[var(--color-accent)] transition-colors">
+                {post.readTime}
+              </span>
             </div>
             <div className="flex flex-col gap-[5px]">
-              <div className="font-sans text-[19px] font-semibold text-[var(--color-syntax-plain)] group-hover:text-[var(--color-text-primary)] transition-colors">
+              <div className="font-sans text-[17px] sm:text-[19px] font-semibold text-[var(--color-syntax-plain)] group-hover:text-[var(--color-text-primary)] group-active:text-[var(--color-text-primary)] transition-colors leading-snug">
                 {post.title[lang] || post.title.tr}
               </div>
               <div className="font-mono text-[11px] text-[var(--color-text-ghost)]">
                 {post.tags.map(t => `#${t}`).join(' ')}
               </div>
             </div>
-            <div className="font-mono text-[11px] text-[var(--color-text-faint)] group-hover:text-[var(--color-accent)] transition-colors">
-              {post.readTime} <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+            <div className="hidden sm:block font-mono text-[11px] text-[var(--color-text-faint)] group-hover:text-[var(--color-accent)] group-active:text-[var(--color-accent)] transition-colors">
+              {post.readTime} <span className="opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity">→</span>
             </div>
           </Link>
         ))}

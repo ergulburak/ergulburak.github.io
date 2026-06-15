@@ -83,7 +83,7 @@ export function TerminalHero() {
       </div>
 
       {/* Body */}
-      <div className="p-[26px_30px] font-mono text-[14.5px] leading-[2.1]">
+      <div className="p-4 sm:p-[26px_30px] font-mono text-[13px] sm:text-[14.5px] leading-[2.1] break-words sm:break-normal">
         <div>
           <span className="text-[var(--color-accent)]">$ </span>
           <span className="text-[var(--color-text-primary)]">{typed1}</span>

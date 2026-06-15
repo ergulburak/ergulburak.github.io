@@ -12,7 +12,7 @@ export function StackGrid() {
         {t.stack}
       </div>
       
-      <div className="grid grid-cols-[1fr_1fr_1fr] gap-[12px]">
+      <div className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_1fr] gap-[12px]">
         {/* ENGINE */}
         <div className="bg-[var(--color-bg-panel)] border border-[var(--color-border)] rounded-[10px] p-[16px_18px] flex flex-col gap-[8px]">
           <div className="font-mono text-[10px] tracking-[2px] text-[var(--color-accent)]">ENGINE</div>

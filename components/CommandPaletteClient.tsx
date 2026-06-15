@@ -94,7 +94,7 @@ export function CommandPaletteClient({ posts }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-center pt-[70px]">
+    <div className="fixed inset-0 z-50 flex justify-center pt-[20px] sm:pt-[70px] px-4 sm:px-0">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-[rgba(2,4,5,0.55)] backdrop-blur-[3px]" 
@@ -102,22 +102,27 @@ export function CommandPaletteClient({ posts }: Props) {
       ></div>
 
       {/* Palette */}
-      <div className="relative w-full max-w-[580px] bg-[#0E1311] border border-[var(--color-border-subtle)] rounded-[14px] shadow-[0_40px_120px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col max-h-[80vh]">
+      <div className="relative w-full max-w-[580px] bg-[#0E1311] border border-[var(--color-border-subtle)] rounded-[14px] shadow-[0_40px_120px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col max-h-[calc(100dvh-60px)] sm:max-h-[80vh]">
         
         {/* Input */}
         <div className="flex items-center gap-[12px] p-[16px_20px] border-b border-[var(--color-border-hairline)]">
           <span className="font-mono text-[15px] text-[var(--color-accent)]">&gt;</span>
           <div className="relative flex-1 flex items-center font-mono text-[14px] text-[var(--color-text-primary)]">
             <input 
+              id="command-palette-search"
+              name="command-palette-search"
+              type="text"
+              autoComplete="off"
               ref={inputRef}
               value={search}
               onChange={e => { setSearch(e.target.value); setSelectedIndex(0); }}
               onKeyDown={handleKeyDown}
               className="w-full bg-transparent outline-none caret-[var(--color-attention)]"
               autoFocus
+              placeholder="Search..."
             />
           </div>
-          <span className="font-mono text-[10px] text-[var(--color-text-faint)] border border-[var(--color-border-subtle)] rounded-[5px] px-[8px] py-[2px]">
+          <span className="hidden sm:inline-block font-mono text-[10px] text-[var(--color-text-faint)] border border-[var(--color-border-subtle)] rounded-[5px] px-[8px] py-[2px]">
             ESC
           </span>
         </div>
@@ -136,19 +141,19 @@ export function CommandPaletteClient({ posts }: Props) {
                   <div 
                     key={post.slug}
                     onClick={() => { router.push(`/blog/${post.slug}`); setIsOpen(false); }}
-                    className={`flex justify-between items-center p-[11px_14px] rounded-[8px] cursor-pointer ${
+                    className={`flex flex-col sm:flex-row sm:justify-between sm:items-center p-[11px_14px] rounded-[8px] cursor-pointer gap-1 sm:gap-0 ${
                       isSelected ? 'bg-[rgba(52,211,153,0.1)] border border-[rgba(52,211,153,0.3)]' : 'border border-transparent hover:bg-[#111614]'
                     }`}
                   >
-                    <div className="flex items-center gap-[10px]">
-                      <span className={`font-mono text-[11px] ${isSelected ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-ghost)]'}`}>
+                    <div className="flex items-start sm:items-center gap-[10px]">
+                      <span className={`hidden sm:inline-block font-mono text-[11px] mt-1 sm:mt-0 ${isSelected ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-ghost)]'}`}>
                         ▸
                       </span>
-                      <span className={`font-sans text-[14.5px] ${isSelected ? 'font-semibold text-[var(--color-text-primary)]' : 'text-[var(--color-text-dim)]'}`}>
+                      <span className={`font-sans text-[14.5px] leading-snug ${isSelected ? 'font-semibold text-[var(--color-text-primary)]' : 'text-[var(--color-text-dim)]'}`}>
                         <Highlight text={displayTitle} />
                       </span>
                     </div>
-                    <span className="font-mono text-[10px] text-[var(--color-text-ghost)]">
+                    <span className="font-mono text-[10px] text-[var(--color-text-ghost)] ml-0 sm:ml-2">
                       {post.date}
                     </span>
                   </div>
@@ -174,7 +179,7 @@ export function CommandPaletteClient({ posts }: Props) {
                     }`}
                   >
                     <div className="flex items-center gap-[10px]">
-                      <span className={`font-mono text-[11px] ${isSelected ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-ghost)]'}`}>
+                      <span className={`hidden sm:inline-block font-mono text-[11px] ${isSelected ? 'text-[var(--color-accent)]' : 'text-[var(--color-text-ghost)]'}`}>
                         →
                       </span>
                       <span className="font-mono text-[13px] text-[var(--color-text-dim)]">
@@ -198,7 +203,7 @@ export function CommandPaletteClient({ posts }: Props) {
         </div>
 
         {/* Footer */}
-        <div className="flex gap-[18px] p-[12px_20px] border-t border-[var(--color-border-hairline)] bg-[#0B100D] font-mono text-[10px] text-[var(--color-text-faint)]">
+        <div className="hidden sm:flex gap-[18px] p-[12px_20px] border-t border-[var(--color-border-hairline)] bg-[#0B100D] font-mono text-[10px] text-[var(--color-text-faint)]">
           <span>↑↓ {t.paletteNav}</span>
           <span>↵ {t.paletteOpen}</span>
           <span>ESC {t.paletteClose}</span>

@@ -25,9 +25,9 @@ export function Navbar() {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center py-[18px] px-9 border-b border-[var(--color-border-hairline)] w-full max-w-[1380px] mx-auto">
+    <nav className="flex flex-col sm:flex-row justify-between items-center py-4 sm:py-[18px] px-4 sm:px-9 border-b border-[var(--color-border-hairline)] w-full max-w-[1380px] mx-auto gap-4 sm:gap-0">
       {/* Path Crumb */}
-      <div className="font-mono text-[13px] text-[var(--color-accent)] flex items-center">
+      <div className="font-mono text-[13px] text-[var(--color-accent)] flex items-center w-full sm:w-auto justify-center sm:justify-start">
         <span>~/burak</span>
         {segments.map((segment, idx) => {
           const isSlug = segments[0] === 'blog' && idx === 1;
@@ -41,7 +41,7 @@ export function Navbar() {
       </div>
 
       {/* Nav Links */}
-      <div className="flex items-center gap-[26px] font-mono text-[12px]">
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-[26px] font-mono text-[12px]">
         <Link 
           href="/" 
           className={pathname === '/' ? "text-[var(--color-text-primary)] border-b border-[var(--color-accent)] pb-[2px]" : "text-[var(--color-text-faint)] hover:text-[var(--color-text-primary)] transition-colors"}
